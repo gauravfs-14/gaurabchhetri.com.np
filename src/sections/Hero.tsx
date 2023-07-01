@@ -15,7 +15,7 @@ function Hero() {
           delay: 0.6,
         }}
       >
-        Hi, I'm
+        Hi, I&apos;m
       </motion.h1>
       <motion.h2
         className="hero-title-large"
@@ -39,7 +39,7 @@ function Hero() {
           delay: 1.05,
         }}
       >
-       Transforming Ideas into Reality.
+        Transforming Ideas into Reality.
       </motion.h3>
       <motion.p
         className="hero-text"
@@ -51,7 +51,11 @@ function Hero() {
           delay: 1.35,
         }}
       >
-       I'm a dedicated and passionate web developer, driven by a relentless pursuit of crafting captivating online experiences. With a combination of technical expertise and creative flair, I specialize in turning ideas into reality through meticulous coding and innovative design.
+        I&apos;m a dedicated and passionate web developer, driven by a
+        relentless pursuit of crafting captivating online experiences. With a
+        combination of technical expertise and creative flair, I specialize in
+        turning ideas into reality through meticulous coding and innovative
+        design.
       </motion.p>
       <motion.div
         className="hero-button"
@@ -63,10 +67,7 @@ function Hero() {
           delay: 1.65,
         }}
       >
-        <Button
-          text="Say Hello"
-          link="mailto:contact@gaurabchhetri.com.np"
-        />
+        <Button text="Say Hello" link="mailto:contact@gaurabchhetri.com.np" />
       </motion.div>
     </div>
   );

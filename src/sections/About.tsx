@@ -26,33 +26,53 @@ function About() {
       <div className="about-grid">
         <div className="about-grid-info">
           <p className="about-grid-info-text">
-            Namaste! My name is Gaurab, and I am passionate about transforming creative ideas into reality through web. My interest in web     development was developed since I was introduced with HTML and, I created a basic web page with it which made me delve into web development.
+            Namaste! My name is Gaurab, and I am passionate about transforming
+            creative ideas into reality through web. My interest in web
+            development was developed since I was introduced with HTML and, I
+            created a basic web page with it which made me delve into web
+            development.
           </p>
           <p className="about-grid-info-text">
-            Fast-forward to today, I transform creative ideas into reality with Web. I also transformed my own idea into reality with my skills by building a brand called {" "}
-            <Link href="https://computenepal.com" className="link" target="_blank">
+            Fast-forward to today, I transform creative ideas into reality with
+            Web. I also transformed my own idea into reality with my skills by
+            building a brand called{" "}
+            <Link
+              href="https://computenepal.com"
+              className="link"
+              target="_blank"
+            >
               ComputeNepal.
             </Link>
           </p>
 
           <p className="about-grid-info-text">
-            Additionally, I help others and share my knowledge to others through my YouTube Channel and also through other different web portals.
+            Additionally, I help others and share my knowledge to others through
+            my YouTube Channel and also through other different web portals.
           </p>
           <p className="about-grid-info-text">
-            Here's a quote that I follow "Do what you want not what you can!"
+            Here&apos;s a quote that I follow &quot;Do what you want not what
+            you can!&quot;
           </p>
           <p className="about-grid-info-text">
-            Below are some technologies that I've worked on:
+            Below are some technologies that I&apos;ve worked on:
           </p>
           <ul className="about-grid-info-list">
             <li className="about-grid-info-list-item">HTML, CSS, Markdown</li>
-            <li className="about-grid-info-list-item">Tailwind CSS, Bootstrap</li>
-            <li className="about-grid-info-list-item">JavaScript, TypeScript</li>
-            <li className="about-grid-info-list-item">React, Next, React Native</li>
+            <li className="about-grid-info-list-item">
+              Tailwind CSS, Bootstrap
+            </li>
+            <li className="about-grid-info-list-item">
+              JavaScript, TypeScript
+            </li>
+            <li className="about-grid-info-list-item">
+              React, Next, React Native
+            </li>
             <li className="about-grid-info-list-item">PHP, SQL</li>
             <li className="about-grid-info-list-item">Node.js, Express.js</li>
             <li className="about-grid-info-list-item">MongoDB, MySQL</li>
-            <li className="about-grid-info-list-item">Linux, NPM, Yarn, Expo</li>
+            <li className="about-grid-info-list-item">
+              Linux, NPM, Yarn, Expo
+            </li>
             <li className="about-grid-info-list-item">Figma, GIMP, Canva</li>
             <li className="about-grid-info-list-item">WordPress/ Blogger</li>
             <li className="about-grid-info-list-item">CloudFlare, Netlify</li>
