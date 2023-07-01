@@ -25,11 +25,8 @@ function Index() {
     <div className="app">
       <Head>
         <title>Gaurab Chhetri</title>
-        <link
-          rel="icon"
-          href="/gaurabchhetri.jpeg"
-          type="image/x-icon"
-        />
+        <link rel="icon" href="/gaurabchhetri.jpeg" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       {showContent && (
         <>
