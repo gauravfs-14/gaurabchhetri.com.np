@@ -87,7 +87,7 @@ function OtherProjects() {
       },
     },
     {
-      projectName: "Custom Raspberry Pi Computer",
+      projectName: "Raspberry Pi Computer",
       projectLink:
         "https://photos.google.com/share/AF1QipMFeZs6N1iaRhtgHn_Wz39bmSDLS6GscP2l4ZlNYOeJval5lF93Jcub3uvjHPrZlA?pli=1&key=UWFCLWFmRzgxQmNmUHdoazRuSmlIbUJfaUZWeHdn",
       projectDescription:
