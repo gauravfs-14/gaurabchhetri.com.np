@@ -19,7 +19,7 @@ function Projects() {
         "JavaScript",
         "PHP",
         "CloudFlare",
-        "Hosting"
+        "Hosting",
       ],
       projectExternalLinks: {
         github: "https://github.com/computenepal/",
@@ -32,16 +32,30 @@ function Projects() {
       projectLink: "https://learn-html.computenepal.com",
       projectDescription:
         "This is a project that helps people around the world to learn about HTML.",
-      projectTech: [
-        "React",
-        "Markdown",
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ],
+      projectTech: ["React", "Markdown", "HTML", "CSS", "JavaScript"],
       projectExternalLinks: {
         github: "https://github.com/computenepal/learn-html",
         externalLink: "https://learn-html.computenepal.com",
+      },
+    },
+    {
+      image: "/onlinestore.webp",
+      projectName: "OnlineStore",
+      projectLink: "https://onlinestore-gauravfs-14.netlify.app/",
+      projectDescription:
+        "This is a onlinestore where you can search products, see their details and add the products to the cart.",
+      projectTech: [
+        "Next JS",
+        "Tailwind CSS",
+        "TypeScript",
+        "JavaScript",
+        "ESLint",
+        "React Query/ TanStack Query",
+        "Netlify",
+      ],
+      projectExternalLinks: {
+        github: "https://github.com/gauravfs-14/onlinestore",
+        externalLink: "https://onlinestore-gauravfs-14.netlify.app/",
       },
     },
     {
@@ -50,37 +64,24 @@ function Projects() {
       projectLink: "https://text-utils-gauravfs-14.netlify.app/",
       projectDescription:
         "This is a react based project that provides different text based utilities.",
-      projectTech: [
-        "React",
-        "Bootstrap",
-        "React Router",
-        "Netlify"
-      ],
+      projectTech: ["React", "Bootstrap", "React Router", "Netlify"],
       projectExternalLinks: {
         github: "https://github.com/gauravfs-14/text-utils",
         externalLink: "https://text-utils-gauravfs-14.netlify.app/",
       },
     },
-  {
+    {
       image: "/lms.png",
       projectName: "LMS PHP & MySQL",
       projectLink: "http://library-management.gaurabchhetri.com.np",
       projectDescription:
         "This is a library management system built with PHP. Admin Credentials ==> uname&pass: 'admin_admin' and Student Credentials ==> uname&pass: 'johndoe123@gmail.com'",
-      projectTech: [
-        "PHP",
-        "MySQL",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Hosting"
-      ],
+      projectTech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Hosting"],
       projectExternalLinks: {
         github: "https://github.com/gauravfs-14/library_management_php",
         externalLink: "http://library-management.gaurabchhetri.com.np",
       },
     },
-
   ];
   return (
     <div className="projects" id="work">
