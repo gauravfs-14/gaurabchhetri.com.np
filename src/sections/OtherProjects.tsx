@@ -7,40 +7,17 @@ import { motion } from "framer-motion";
 function OtherProjects() {
   const projectsData = [
     {
-      projectName: "Quiz Application",
-      projectLink: "https://quiz.computenepal.com",
-      projectDescription:
-        "This is a quiz application built with pure HTML, CSS and JavaScript.",
-      projectTech: ["JavaScript", "HTML", "CSS"],
-      projectExternalLinks: {
-        github: "https://github.com/gauravfs-14/quiz_computenepal",
-        externalLink: "https://quiz.computenepal.com",
-      },
-    },
-    {
-      projectName: "John Doe Portfolio",
+      projectName: "Raspberry Pi Computer",
       projectLink:
-        "https://www.youtube.com/playlist?list=PLdOGfUXjXxTM4ZkyfkV5cHjjELfA_zi38",
+        "https://photos.google.com/share/AF1QipMFeZs6N1iaRhtgHn_Wz39bmSDLS6GscP2l4ZlNYOeJval5lF93Jcub3uvjHPrZlA?pli=1&key=UWFCLWFmRzgxQmNmUHdoazRuSmlIbUJfaUZWeHdn",
       projectDescription:
-        "This is a basic Portfolio project that was built in my Youtube Channel.",
-      projectTech: ["JavaScript", "HTML", "CSS"],
+        "Created a custom mini computer using Raspberry Pi which can be used for different purposes like teaching children, learning Linux, learning pen-testing, etc.",
+      projectTech: ["Raspberry Pi", "Linux", "Operating System", "Electronics"],
       projectExternalLinks: {
         github:
-          "https://github.com/gauravfs-14/animated-portfolio-homepage-with-darkmode-toggle",
+          "https://photos.google.com/share/AF1QipMFeZs6N1iaRhtgHn_Wz39bmSDLS6GscP2l4ZlNYOeJval5lF93Jcub3uvjHPrZlA?pli=1&key=UWFCLWFmRzgxQmNmUHdoazRuSmlIbUJfaUZWeHdn",
         externalLink:
-          "https://www.youtube.com/playlist?list=PLdOGfUXjXxTM4ZkyfkV5cHjjELfA_zi38",
-      },
-    },
-    {
-      projectName: "React Native Notes App",
-      projectLink:
-        "https://github.com/gauravfs-14/react-native-short-notes-app/releases/tag/v1.0.0",
-      projectDescription: "This is a short notes app built with React Native.",
-      projectTech: ["React Native", "React", "JavaScript", "Expo"],
-      projectExternalLinks: {
-        github: "https://github.com/gauravfs-14/react-native-short-notes-app/",
-        externalLink:
-          "https://github.com/gauravfs-14/react-native-short-notes-app/releases/tag/v1.0.0",
+          "https://photos.google.com/share/AF1QipMFeZs6N1iaRhtgHn_Wz39bmSDLS6GscP2l4ZlNYOeJval5lF93Jcub3uvjHPrZlA?pli=1&key=UWFCLWFmRzgxQmNmUHdoazRuSmlIbUJfaUZWeHdn",
       },
     },
     {
@@ -66,17 +43,6 @@ function OtherProjects() {
       },
     },
     {
-      projectName: "Nepal Web",
-      projectLink: "https://gauravfs-14.github.io/Nepal-Website/",
-      projectDescription:
-        "This is a website that provides information about the country Nepal.",
-      projectTech: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
-      projectExternalLinks: {
-        github: "https://github.com/gauravfs-14/Nepal-Website",
-        externalLink: "https://gauravfs-14.github.io/Nepal-Website/",
-      },
-    },
-    {
       projectName: "NpVim",
       projectLink: "https://github.com/gauravfs-14/NpVim",
       projectDescription: "Ready-to-go neovim config build on top of lazyvim.",
@@ -87,17 +53,28 @@ function OtherProjects() {
       },
     },
     {
-      projectName: "Raspberry Pi Computer",
-      projectLink:
-        "https://photos.google.com/share/AF1QipMFeZs6N1iaRhtgHn_Wz39bmSDLS6GscP2l4ZlNYOeJval5lF93Jcub3uvjHPrZlA?pli=1&key=UWFCLWFmRzgxQmNmUHdoazRuSmlIbUJfaUZWeHdn",
+      projectName: "Quiz Application",
+      projectLink: "https://quiz.computenepal.com",
       projectDescription:
-        "This is a custom Raspberry Pi Computer. Unrelated to web development but closer to my heart.",
-      projectTech: ["Raspberry Pi", "Linux", "Operating System", "Electronics"],
+        "This is a quiz application built with pure HTML, CSS and JavaScript.",
+      projectTech: ["JavaScript", "HTML", "CSS"],
+      projectExternalLinks: {
+        github: "https://github.com/gauravfs-14/quiz_computenepal",
+        externalLink: "https://quiz.computenepal.com",
+      },
+    },
+    {
+      projectName: "John Doe Portfolio",
+      projectLink:
+        "https://www.youtube.com/playlist?list=PLdOGfUXjXxTM4ZkyfkV5cHjjELfA_zi38",
+      projectDescription:
+        "This is a basic Portfolio project that was built in my Youtube Channel.",
+      projectTech: ["JavaScript", "HTML", "CSS"],
       projectExternalLinks: {
         github:
-          "https://photos.google.com/share/AF1QipMFeZs6N1iaRhtgHn_Wz39bmSDLS6GscP2l4ZlNYOeJval5lF93Jcub3uvjHPrZlA?pli=1&key=UWFCLWFmRzgxQmNmUHdoazRuSmlIbUJfaUZWeHdn",
+          "https://github.com/gauravfs-14/animated-portfolio-homepage-with-darkmode-toggle",
         externalLink:
-          "https://photos.google.com/share/AF1QipMFeZs6N1iaRhtgHn_Wz39bmSDLS6GscP2l4ZlNYOeJval5lF93Jcub3uvjHPrZlA?pli=1&key=UWFCLWFmRzgxQmNmUHdoazRuSmlIbUJfaUZWeHdn",
+          "https://www.youtube.com/playlist?list=PLdOGfUXjXxTM4ZkyfkV5cHjjELfA_zi38",
       },
     },
   ];

@@ -11,7 +11,7 @@ function Projects() {
       projectName: "ComputeNepal",
       projectLink: "https://computenepal.com",
       projectDescription:
-        "This is a project that helps people around the world learn about technology.",
+        "Welcome to ComputeNepal, your number-one source for all things to get updated into cyber space. We are dedicated to providing you with the very best of the best, with an emphasis on quality content, and genuine information.",
       projectTech: [
         "WordPress",
         "HTML",
@@ -27,15 +27,67 @@ function Projects() {
       },
     },
     {
+      image: "/satmarga.png",
+      projectName: "Satmarga Education",
+      projectLink: "https://satmargaeducation.com",
+      projectDescription:
+        "Welcome to Satmarga Education Consultancy, your trusted partner on the path to global education excellence. Established in the heart of Pokhara, Nepal, we are dedicated to shaping the future of aspiring students by providing comprehensive guidance and support throughout their study abroad journey.",
+      projectTech: [
+        "WordPress",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "CloudFlare",
+        "Hosting",
+      ],
+      projectExternalLinks: {
+        github: "https://satmargaeducation.com",
+        externalLink: "https://satmargaeducation.com",
+      },
+    },
+    {
+      image: "/aizenix.png",
+      projectName: "AIZENIX: Digital Markeing Agency",
+      projectLink: "https://aizenix.com",
+      projectDescription:
+        "We do not chase after too many clients and compromise on quality. Instead, we work with a few clients and make sure they get the best possible results and service from us. We discuss with you and deeply analyze your business needs for further growth. We create our strategies accordingly so that you get a personalized solution and get the best possible results and experience working with us. We always keep honesty and integrity as the best policy in our company.",
+      projectTech: [
+        "WordPress",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "Project Management",
+        "Hosting",
+      ],
+      projectExternalLinks: {
+        github: "https://aizenix.com",
+        externalLink: "https://aizenix.com",
+      },
+    },
+    {
       image: "/learn-html.png",
       projectName: "Learn HTML",
       projectLink: "https://learn-html.computenepal.com",
       projectDescription:
-        "This is a project that helps people around the world to learn about HTML.",
+        " YOU can be a part of this journey too! Our course content is open to all, fostering a community-driven approach where contributions from individuals like you shape the learning experience for everyone. Join us in democratizing education!",
       projectTech: ["React", "Markdown", "HTML", "CSS", "JavaScript"],
       projectExternalLinks: {
         github: "https://github.com/computenepal/learn-html",
         externalLink: "https://learn-html.computenepal.com",
+      },
+    },
+    {
+      image: "/lms.png",
+      projectName: "LMS PHP & MySQL",
+      projectLink: "http://library-management.gaurabchhetri.com.np",
+      projectDescription:
+        "This is a library management system built with PHP. Admin Credentials ==> uname&pass: 'admin_admin' and Student Credentials ==> uname&pass: 'johndoe123@gmail.com'",
+      projectTech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Hosting"],
+      projectExternalLinks: {
+        github: "https://github.com/gauravfs-14/library_management_php",
+        externalLink: "http://library-management.gaurabchhetri.com.np",
       },
     },
     {
@@ -70,18 +122,7 @@ function Projects() {
         externalLink: "https://text-utils-gauravfs-14.netlify.app/",
       },
     },
-    {
-      image: "/lms.png",
-      projectName: "LMS PHP & MySQL",
-      projectLink: "http://library-management.gaurabchhetri.com.np",
-      projectDescription:
-        "This is a library management system built with PHP. Admin Credentials ==> uname&pass: 'admin_admin' and Student Credentials ==> uname&pass: 'johndoe123@gmail.com'",
-      projectTech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Hosting"],
-      projectExternalLinks: {
-        github: "https://github.com/gauravfs-14/library_management_php",
-        externalLink: "http://library-management.gaurabchhetri.com.np",
-      },
-    },
+
   ];
   return (
     <div className="projects" id="work">

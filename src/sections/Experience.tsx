@@ -14,6 +14,23 @@ function Experience() {
 
   const expereinces = [
     {
+      name: "Satmarga Education",
+      role: "IT Officer",
+      url: "https://satmargaeducation.com",
+      start: "February 2024",
+      end: "Present",
+      shortDescription: [
+        "Spearheaded the development and maintenance of the company's website, ensuring alignment with brand identity and providing an engaging user experience.",
+        "Manage domain registrations, renewals, and configurations, while overseeing the setup and maintenance of company email accounts.",
+        "Develop and execute social media strategies to increase brand awareness, engagement, and drive traffic to online platforms.",
+        "Implement digital marketing campaigns across various channels to promote products/services and generate leads.",
+        "Create visually appealing graphics, illustrations, and multimedia content for marketing materials and social media posts.",
+        "Continuously improve website functionality and user experience through coding, troubleshooting, and implementing new features.",
+        "Conceptualize, produce, and optimize video and photo ad campaigns to effectively communicate key messages and drive conversions.",
+        "Ensure the smooth operation of computers and related equipment in the company's lab environment, including troubleshooting hardware/software issues and performing routine maintenance tasks.",
+      ],
+    },
+    {
       name: "ComputeNepal",
       role: "Founder And Developer",
       url: "https://computenepal.com",
@@ -50,7 +67,7 @@ function Experience() {
         "Overall, it was a rewarding experience that allowed me to develop my skills and help people around the world.",
       ],
     },
-     ];
+  ];
   return (
     <motion.div
       className="experience"
@@ -73,9 +90,8 @@ function Experience() {
           {expereinces.map((expereince, index) => {
             return (
               <li
-                className={`exp-slider-item ${
-                  index === selected && "exp-slider-item-selected"
-                }`}
+                className={`exp-slider-item ${index === selected && "exp-slider-item-selected"
+                  }`}
                 onClick={() => setSelected(index)}
                 key={expereince.name}
               >

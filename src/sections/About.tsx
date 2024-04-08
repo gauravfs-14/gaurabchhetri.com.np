@@ -26,33 +26,29 @@ function About() {
       <div className="about-grid">
         <div className="about-grid-info">
           <p className="about-grid-info-text">
-            Namaste! My name is Gaurab, and I am passionate about transforming
-            creative ideas into reality through web. My interest in web
-            development was developed since I was introduced with HTML and, I
-            created a basic web page with it which made me delve into web
-            development.
+            Namaste! 🙏 My name is Gaurab, and I am passionate about bringing creative ideas to life through web development. My journey into web development began when I was introduced to HTML, and I created my first basic web page. This initial experience ignited my passion for the field, leading me to delve deeper into the world of web development.
           </p>
           <p className="about-grid-info-text">
-            Fast-forward to today, I transform creative ideas into reality with
-            Web. I also transformed my own idea into reality with my skills by
-            building a brand called{" "}
-            <Link
+            Fast-forward to today, I specialize in transforming creative concepts into reality using a variety of web technologies. I&apos;ve had the pleasure of bringing my own ideas to fruition, including the creation of a successful brand called<Link
               href="https://computenepal.com"
               className="link"
               target="_blank"
             >
               ComputeNepal.
-            </Link>
+            </Link>. In addition to my entrepreneurial pursuits, I&apos;ve gained invaluable experience as an IT Officer at <Link
+              href="https://satmargaeducation.com"
+              className="link"
+              target="_blank"
+            >
+              Satmarga Education
+            </Link>, where I&apos;ve honed my skills in managing domain registrations, email systems, and computer lab environments to ensure seamless technological operations. 💼💻
+
           </p>
 
           <p className="about-grid-info-text">
-            Additionally, I help others and share my knowledge to others through
-            my YouTube Channel and also through other different web portals.
+            In addition to my professional roles, I am dedicated to sharing my knowledge and helping others through my YouTube Channel and various web portals. I firmly believe in the mantra &quot;Do what you want, not what you can!&quot;, which drives me to pursue my passions relentlessly. 🚀
           </p>
-          <p className="about-grid-info-text">
-            Here&apos;s a quote that I follow &quot;Do what you want not what
-            you can!&quot;
-          </p>
+
           <p className="about-grid-info-text">
             Below are some technologies that I&apos;ve worked on:
           </p>
@@ -77,6 +73,9 @@ function About() {
             <li className="about-grid-info-list-item">WordPress/ Blogger</li>
             <li className="about-grid-info-list-item">CloudFlare, Netlify</li>
             <li className="about-grid-info-list-item">Git, GitHub</li>
+            <li className="about-grid-info-list-item">SEO, Digital Marketing</li>
+            <li className="about-grid-info-list-item">Graphic Design, Video Editing</li>
+            <li className="about-grid-info-list-item">Domain Management, Computer Maintenance</li>
           </ul>
         </div>
         <div className="about-grid-photo">

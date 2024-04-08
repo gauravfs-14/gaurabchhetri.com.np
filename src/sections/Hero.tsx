@@ -51,11 +51,7 @@ function Hero() {
           delay: 1.35,
         }}
       >
-        I&apos;m a dedicated and passionate web developer, driven by a
-        relentless pursuit of crafting captivating online experiences. With a
-        combination of technical expertise and creative flair, I specialize in
-        turning ideas into reality through meticulous coding and innovative
-        design.
+        I&apos;m a dedicated and passionate web developer, driven by a relentless pursuit of crafting captivating online experiences. With a combination of technical expertise and creative flair, I specialize in turning ideas into reality through meticulous coding and innovative design. Whether it&apos;s building responsive websites or developing immersive web applications, I thrive on pushing the boundaries of what&apos;s possible in the digital realm.
       </motion.p>
       <motion.div
         className="hero-button"
