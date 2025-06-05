@@ -30,24 +30,13 @@ export default function Home() {
             building things that matters. Currently, I am an Undergraduate
             Research Assistant at the Texas State University, where I combine my
             skills in full-stack development with academic research to build
-            innovative tools and applications.
+            innovative tools and applications. The following are some tools from
+            my skill set that I use to build impactful projects.
           </p>
         </InView>
       </div>
       <div className="mt-14" />
       <div>
-        <InView
-          variants={{
-            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
-            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-          }}
-          viewOptions={{ margin: "0px 0px -200px 0px" }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 }}
-        >
-          <h2 aria-description="Skills Section" className="font-bold text-lg">
-            {"// myToolBox"}
-          </h2>
-        </InView>
         <SkillsGrid />
       </div>
       <div className="mt-14" />
