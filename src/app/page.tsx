@@ -1,4 +1,5 @@
 import ProfileCard from "@/components/profile-card";
+import ProjectsGrid from "@/components/projects-grid";
 import SkillsGrid from "@/components/skills-grid";
 import { InView } from "@/components/ui/in-view";
 
@@ -39,6 +40,10 @@ export default function Home() {
       <div>
         <SkillsGrid />
       </div>
+      <div className="mt-14" />
+      <section id="projects" className="scroll-mt-50">
+        <ProjectsGrid />
+      </section>
       <div className="mt-14" />
     </main>
   );

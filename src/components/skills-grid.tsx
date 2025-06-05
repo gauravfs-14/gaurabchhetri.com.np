@@ -90,7 +90,7 @@ export default function SkillsGrid() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
       <AnimatedBackground
-        className="rounded-lg bg-zinc-100 dark:bg-zinc-800"
+        className="rounded-lg bg-card"
         transition={{
           type: "spring",
           bounce: 0.2,
