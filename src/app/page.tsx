@@ -18,10 +18,10 @@ export default function Home() {
       <div>
         <p className="text-lg text-muted-foreground">
           Hello World <span className="text-xl">👋</span>, I specialize in
-          building things for the web. Currently, I am an Undergraduate Research
-          Assistant at the Texas State University, where I combine my skills in
-          full-stack development with academic research to build innovative
-          tools and applications.
+          building things that matters. Currently, I am an Undergraduate
+          Research Assistant at the Texas State University, where I combine my
+          skills in full-stack development with academic research to build
+          innovative tools and applications.
         </p>
       </div>
       <div className="mt-14" />
