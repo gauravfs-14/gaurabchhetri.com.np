@@ -3,6 +3,7 @@ import { InView } from "@/components/ui/in-view";
 import {
   SiCss3,
   SiExpress,
+  SiGit,
   SiHtml5,
   SiJavascript,
   SiLinux,
@@ -11,6 +12,7 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiPhp,
+  SiPrisma,
   SiPython,
   SiReact,
   SiTailwindcss,
@@ -47,6 +49,10 @@ const skills = [
     icon: SiMongodb,
   },
   {
+    name: "Prisma",
+    icon: SiPrisma,
+  },
+  {
     name: "HTML",
     icon: SiHtml5,
   },
@@ -73,6 +79,10 @@ const skills = [
   {
     name: "Linux",
     icon: SiLinux,
+  },
+  {
+    name: "Git",
+    icon: SiGit,
   },
 ];
 
