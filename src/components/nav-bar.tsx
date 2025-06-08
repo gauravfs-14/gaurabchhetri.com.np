@@ -32,7 +32,7 @@ export default function NavBar() {
         >
           <li>
             <Link
-              href="#projects"
+              href="/#projects"
               className={cn(
                 buttonVariants({ variant: "link", size: "lg" }),
                 "px-0 text-foreground hover:text-primary"
@@ -52,7 +52,7 @@ export default function NavBar() {
         >
           <li>
             <Link
-              href="#blogs"
+              href="/blogs"
               className={cn(
                 buttonVariants({ variant: "link", size: "lg" }),
                 "px-0 text-foreground hover:text-primary"

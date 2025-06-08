@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -188,4 +189,47 @@
     letter-spacing: var(--tracking-normal);
     scroll-behavior: smooth;
   }
+}
+@layer components {
+  .prose h1:hover .anchor-link,
+  .prose h2:hover .anchor-link,
+  .prose h3:hover .anchor-link {
+    opacity: 1;
+  }
+
+  .anchor-link::before {
+    position: absolute;
+    top: 0;
+    left: -1.5rem;
+    overflow: visible;
+    content: "#";
+    color: theme('colors.gray.400');
+  }
+
+  .anchor-link {
+    opacity: 0;
+    margin-left: 0.3rem;
+    font-size: 0.9em;
+    transition: opacity 0.2s ease;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .code-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #f3f4f6; /* Tailwind gray-100 */
+  color: #111827; /* Tailwind gray-900 */
+  padding: 0.5rem 0.75rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border: 1px solid #e5e7eb; /* Tailwind border-gray-200 */
+  border-bottom: none;
+}
+
+/* Wrap the pre to fix border overlap */
+pre > code {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
 }
