@@ -16,7 +16,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
-import { ScrollArea } from "./ui/scroll-area";
 
 export default async function ProjectsGrid() {
   const projects = getProjects();
@@ -30,7 +29,7 @@ export default async function ProjectsGrid() {
             hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
           }}
-          viewOptions={{ margin: "0px 0px -200px 0px" }}
+          viewOptions={{ margin: "0px 0px -100px 0px" }}
           transition={{ duration: 0.3, ease: "easeInOut", delay: idx * 0.05 }}
         >
           <div className="relative w-full h-max overflow-hidden p-[1px] rounded-lg">

@@ -1,6 +1,8 @@
+import BlogsList from "@/components/blogs-list";
 import ProfileCard from "@/components/profile-card";
 import ProjectsGrid from "@/components/projects-grid";
 import SkillsGrid from "@/components/skills-grid";
+import { Badge } from "@/components/ui/badge";
 import { InView } from "@/components/ui/in-view";
 
 export default function Home() {
@@ -11,7 +13,7 @@ export default function Home() {
           hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
           visible: { opacity: 1, y: 0, filter: "blur(0px)" },
         }}
-        viewOptions={{ margin: "0px 0px -200px 0px" }}
+        viewOptions={{ margin: "0px 0px -100px 0px" }}
         transition={{ duration: 0.3, ease: "easeInOut", delay: 0 }}
       >
         <ProfileCard />
@@ -20,10 +22,10 @@ export default function Home() {
       <div>
         <InView
           variants={{
-            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+            hidden: { opacity: 0, y: 10, filter: "blur(5px)" },
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
           }}
-          viewOptions={{ margin: "0px 0px -200px 0px" }}
+          viewOptions={{ margin: "0px 0px -100px 0px" }}
           transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 }}
         >
           <p className="text-muted-foreground">
@@ -38,13 +40,51 @@ export default function Home() {
       </div>
       <div className="mt-14" />
       <div>
+        <InView
+          variants={{
+            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+          }}
+          viewOptions={{ margin: "0px 0px -100px 0px" }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.2 }}
+        >
+          <Badge variant={"secondary"}>Skills</Badge>
+        </InView>
         <SkillsGrid />
       </div>
       <div className="mt-14" />
       <section id="projects" className="scroll-mt-50">
+        <InView
+          variants={{
+            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+          }}
+          viewOptions={{ margin: "0px 0px -100px 0px" }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
+        >
+          <Badge variant={"secondary"} className="mb-4">
+            Featured Projects
+          </Badge>
+        </InView>
         <ProjectsGrid />
       </section>
       <div className="mt-14" />
+      <section id="blogs" className="scroll-mt-50">
+        <InView
+          variants={{
+            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+          }}
+          viewOptions={{ margin: "0px 0px -100px 0px" }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.4 }}
+        >
+          <Badge variant={"secondary"} className="mb-4">
+            Recent Blogs
+          </Badge>
+        </InView>
+        <BlogsList itemsNumber={5} />
+      </section>
+      <div className="mt-20" />
     </main>
   );
 }
