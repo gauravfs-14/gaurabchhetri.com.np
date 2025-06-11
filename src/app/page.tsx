@@ -160,7 +160,7 @@ export default function Home() {
               transition={{ duration: 0.3, ease: "easeInOut", delay: 0.8 }}
               key={index}
             >
-              <div key={index} className="mb-8">
+              <div key={index} className="mb-8 p-3">
                 <p className="text-sm text-muted-foreground font-medium mb-2">
                   <Calendar className="inline mr-1 w-4 h-4" />
                   {edu.date}
@@ -211,7 +211,7 @@ export default function Home() {
               transition={{ duration: 0.3, ease: "easeInOut", delay: 0.8 }}
               key={index}
             >
-              <div className="mb-8">
+              <div className="mb-8 p-3">
                 <p className="text-sm text-muted-foreground font-medium mb-2">
                   <Calendar className="inline mr-1 w-4 h-4" />
                   {exp.date}
