@@ -38,7 +38,7 @@ export default async function BlogsList({
             <div
               key={idx}
               data-id={`card-${idx}`}
-              className="cursor-pointer p-3"
+              className="cursor-pointer p-3 w-full"
             >
               <InView
                 key={post.slug}
@@ -53,15 +53,19 @@ export default async function BlogsList({
                   delay: 0.3 + idx * 0.05,
                 }}
               >
-                <Link key={post.slug} href={`/blogs/${post.slug}`}>
-                  <div className="flex items-center gap-4">
+                <Link
+                  key={post.slug}
+                  href={`/blogs/${post.slug}`}
+                  className="w-full"
+                >
+                  <div className="flex items-center gap-4 w-full">
                     <h2 className="text-xl font-semibold">
                       <span className="group relative inline-block font-semibold text-lg line-clamp-1">
                         {post.meta.title}
                         <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-foreground transition-all duration-200 group-hover:max-w-full"></span>
                       </span>
                     </h2>
-                    <Badge variant={"secondary"} className="mb-2 ml-auto">
+                    <Badge variant={"outline"} className="mb-2 text-xs">
                       {new Date(post.meta.date).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "long",
@@ -69,7 +73,7 @@ export default async function BlogsList({
                       })}
                     </Badge>
                   </div>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground text-sm line-clamp-2 w-full">
                     {post.meta.description}
                   </p>
                 </Link>
