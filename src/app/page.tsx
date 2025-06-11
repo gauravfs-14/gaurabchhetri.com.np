@@ -9,6 +9,51 @@ import { cn } from "@/lib/utils";
 import { Calendar } from "lucide-react";
 import Link from "next/link";
 
+export const EDUCATION = [
+  {
+    title: "Bachelor of Science in Computer Science",
+    institution: "Texas State University, San Marcos",
+    date: "Expected Graduation: May 2029",
+    description:
+      "I am currently pursuing a Bachelor of Science in Computer Science at Texas State University, where I am learning and gaining hands-on experience in various aspects of computer science, in software development, data structures, algorithms, and web technologies.",
+    skills: [
+      "Computer Science",
+      "Software Development",
+      "Data Structures",
+      "Algorithms",
+      "Web Technologies",
+      "Full Stack Development",
+      "AI & Machine Learning",
+      "Data Science",
+      "Research",
+    ],
+  },
+];
+
+export const EXPERIENCE = [
+  {
+    title: "Undergraduate Research Assistant",
+    institution: "AIT Lab - TXST",
+    institutionLink: "https://ait-lab.vercel.app/",
+    location: "San Marcos, TX",
+    date: "October 2024 - Present",
+    description:
+      "As an Undergraduate Research Assistant at the AIT Lab, I am involved in various tool development and research projects that leverage my skills in web development and data analysis. My role includes collaborating with faculty and a team of researchers/students to create innovative solutions in the field of Transportation with a focus on AI, Machine Learning, and Data Science.",
+    skills: [
+      "TypeScript",
+      "JavaScript",
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Git",
+      "Python",
+      "R",
+      "Data Analysis",
+      "LaTex",
+    ],
+  },
+];
+
 export default function Home() {
   return (
     <main className="container mx-auto px-8 py-10 max-w-3xl">
@@ -104,47 +149,40 @@ export default function Home() {
           </Badge>
         </InView>
         {/* Resume Style Education */}
-        <InView
-          variants={{
-            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
-            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-          }}
-          viewOptions={{ margin: "0px 0px -100px 0px" }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.6 }}
-        >
-          <div>
-            <div>
-              <p className="text-sm text-muted-foreground font-medium mb-2">
-                <Calendar className="inline mr-1 w-4 h-4" />
-                Expected Graduation: May 2029
-              </p>
-              <h3 className="text-lg font-semibold">
-                Bachelor of Science in Computer Science
-              </h3>
-              <p className="text-sm text-muted-foreground mb-3">
-                Texas State University, San Marcos
-              </p>
-              <p className="text-sm text-muted-foreground">
-                I am currently pursuing a Bachelor of Science in Computer
-                Science at Texas State University, where I am learning and
-                gaining hands-on experience in various aspects of computer
-                science, in software development, data structures, algorithms,
-                and web technologies.
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <Badge variant="outline">Computer Science</Badge>
-                <Badge variant="outline">Software Development</Badge>
-                <Badge variant="outline">Data Structures</Badge>
-                <Badge variant="outline">Algorithms</Badge>
-                <Badge variant="outline">Web Technologies</Badge>
-                <Badge variant="outline">Full Stack Development</Badge>
-                <Badge variant="outline">AI & Machine Learning</Badge>
-                <Badge variant="outline">Data Science</Badge>
-                <Badge variant="outline">Research</Badge>
+        <div className="flex flex-col gap-8">
+          {EDUCATION.map((edu, index) => (
+            <InView
+              variants={{
+                hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+                visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+              }}
+              viewOptions={{ margin: "0px 0px -100px 0px" }}
+              transition={{ duration: 0.3, ease: "easeInOut", delay: 0.8 }}
+              key={index}
+            >
+              <div key={index} className="mb-8">
+                <p className="text-sm text-muted-foreground font-medium mb-2">
+                  <Calendar className="inline mr-1 w-4 h-4" />
+                  {edu.date}
+                </p>
+                <h3 className="text-lg font-semibold">{edu.title}</h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  {edu.institution}
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  {edu.description}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {edu.skills.map((skill, skillIndex) => (
+                    <Badge key={skillIndex} variant="outline">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
               </div>
-            </div>
-          </div>
-        </InView>
+            </InView>
+          ))}
+        </div>
       </div>
       <div className="mt-20" />
       {/* Experience Section */}
@@ -163,58 +201,49 @@ export default function Home() {
         </InView>
         {/* Resume Style Experience */}
         <div className="flex flex-col gap-8">
-          <InView
-            variants={{
-              hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
-              visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-            }}
-            viewOptions={{ margin: "0px 0px -100px 0px" }}
-            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.8 }}
-          >
-            <div>
-              <p className="text-sm text-muted-foreground font-medium mb-2">
-                <Calendar className="inline mr-1 w-4 h-4" />
-                August 2023 - Present
-              </p>
-              <h3 className="text-lg font-semibold">
-                Undergraduate Research Assistant
-              </h3>
-              <p className="text-sm text-muted-foreground mb-3">
-                <Link
-                  href="https://ait-lab.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={cn(
-                    buttonVariants({ variant: "link", size: "sm" }),
-                    "p-0 m-0 text-sm"
-                  )}
-                >
-                  AIT Lab - TXST
-                </Link>
-                , San Marcos, TX
-              </p>
-              <p className="text-sm text-muted-foreground">
-                As an UGRA at the AIT Lab, I am involved in various tool
-                development, and research projects that leverage my skills in
-                web development and data analysis. My role includes
-                collaborating with faculty and a team of researchers/ students
-                to create innovative solutations in the field of Transportation
-                with a focus on AI, Machine Learning, and Data Science.
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <Badge variant="outline">TypeScript</Badge>
-                <Badge variant="outline">JavaScript</Badge>
-                <Badge variant="outline">React.js</Badge>
-                <Badge variant="outline">Next.js</Badge>
-                <Badge variant="outline">Tailwind CSS</Badge>
-                <Badge variant="outline">Git</Badge>
-                <Badge variant="outline">Python</Badge>
-                <Badge variant="outline">R</Badge>
-                <Badge variant="outline">Data Analysis</Badge>
-                <Badge variant="outline">LaTex</Badge>
+          {EXPERIENCE.map((exp, index) => (
+            <InView
+              variants={{
+                hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+                visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+              }}
+              viewOptions={{ margin: "0px 0px -100px 0px" }}
+              transition={{ duration: 0.3, ease: "easeInOut", delay: 0.8 }}
+              key={index}
+            >
+              <div className="mb-8">
+                <p className="text-sm text-muted-foreground font-medium mb-2">
+                  <Calendar className="inline mr-1 w-4 h-4" />
+                  {exp.date}
+                </p>
+                <h3 className="text-lg font-semibold">{exp.title}</h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  <Link
+                    href={exp.institutionLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                      buttonVariants({ variant: "link", size: "sm" }),
+                      "p-0 m-0 text-sm"
+                    )}
+                  >
+                    {exp.institution}
+                  </Link>
+                  , {exp.location}
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  {exp.description}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {exp.skills.map((skill, skillIndex) => (
+                    <Badge key={skillIndex} variant="outline">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
               </div>
-            </div>
-          </InView>
+            </InView>
+          ))}
         </div>
       </div>
       <div className="mt-20" />
