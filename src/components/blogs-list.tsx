@@ -3,6 +3,7 @@ import { InView } from "@/components/ui/in-view";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { getPosts } from "@/app/blogs/utils";
+import { Calendar } from "lucide-react";
 
 export default async function BlogsList({
   itemsNumber = 20,
@@ -58,20 +59,21 @@ export default async function BlogsList({
                   href={`/blogs/${post.slug}`}
                   className="w-full"
                 >
-                  <div className="flex items-center gap-4 w-full">
+                  <div className="w-full">
+                    <p className="text-sm text-muted-foreground font-medium mb-2">
+                      <Calendar className="inline mr-1 w-4 h-4" />
+                      {new Date(post.meta.date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </p>
                     <h2 className="text-xl font-semibold">
                       <span className="group relative inline-block font-semibold text-lg line-clamp-1">
                         {post.meta.title}
                         <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-foreground transition-all duration-200 group-hover:max-w-full"></span>
                       </span>
                     </h2>
-                    <Badge variant={"outline"} className="mb-2 text-xs">
-                      {new Date(post.meta.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </Badge>
                   </div>
                   <p className="text-muted-foreground text-sm line-clamp-2 w-full">
                     {post.meta.description}
