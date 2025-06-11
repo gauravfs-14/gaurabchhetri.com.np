@@ -216,7 +216,7 @@ export default function Home() {
                   <Calendar className="inline mr-1 w-4 h-4" />
                   {exp.date}
                 </p>
-                <h3 className="text-lg font-semibold">{exp.title}</h3>
+                <h3 className="text-lg font-semibold -mb-1.5">{exp.title}</h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   <Link
                     href={exp.institutionLink}
