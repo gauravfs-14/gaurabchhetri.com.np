@@ -114,6 +114,10 @@ export default function Home() {
         >
           <div>
             <div>
+              <p className="text-sm text-muted-foreground font-medium mb-2">
+                <Calendar className="inline mr-1 w-4 h-4" />
+                Expected Graduation: May 2029
+              </p>
               <h3 className="text-lg font-semibold">
                 Bachelor of Science in Computer Science
               </h3>
@@ -121,8 +125,23 @@ export default function Home() {
                 Texas State University, San Marcos
               </p>
               <p className="text-sm text-muted-foreground">
-                Expected Graduation: May 2029
+                I am currently pursuing a Bachelor of Science in Computer
+                Science at Texas State University, where I am learning and
+                gaining hands-on experience in various aspects of computer
+                science, in software development, data structures, algorithms,
+                and web technologies.
               </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <Badge variant="outline">Computer Science</Badge>
+                <Badge variant="outline">Software Development</Badge>
+                <Badge variant="outline">Data Structures</Badge>
+                <Badge variant="outline">Algorithms</Badge>
+                <Badge variant="outline">Web Technologies</Badge>
+                <Badge variant="outline">Full Stack Development</Badge>
+                <Badge variant="outline">AI & Machine Learning</Badge>
+                <Badge variant="outline">Data Science</Badge>
+                <Badge variant="outline">Research</Badge>
+              </div>
             </div>
           </div>
         </InView>
@@ -153,21 +172,21 @@ export default function Home() {
             transition={{ duration: 0.3, ease: "easeInOut", delay: 0.8 }}
           >
             <div>
-              <p className="text-sm text-muted-foreground font-semibold mb-2">
+              <p className="text-sm text-muted-foreground font-medium mb-2">
                 <Calendar className="inline mr-1 w-4 h-4" />
                 August 2023 - Present
               </p>
-              <p className="text-lg font-semibold">
+              <h3 className="text-lg font-semibold">
                 Undergraduate Research Assistant
-              </p>
-              <p className="text-sm text-muted-foreground mb-4">
+              </h3>
+              <p className="text-sm text-muted-foreground mb-3">
                 <Link
                   href="https://ait-lab.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
                     buttonVariants({ variant: "link", size: "sm" }),
-                    "p-0 m-0"
+                    "p-0 m-0 text-sm"
                   )}
                 >
                   AIT Lab - TXST
