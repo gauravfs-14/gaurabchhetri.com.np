@@ -51,7 +51,7 @@ export default async function BlogsList({
                 transition={{
                   duration: 0.3,
                   ease: "easeInOut",
-                  delay: 0.3 + idx * 0.05,
+                  delay: 0.1 + idx * 0.01,
                 }}
               >
                 <Link

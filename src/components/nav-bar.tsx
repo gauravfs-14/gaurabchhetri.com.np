@@ -73,7 +73,7 @@ export default function NavBar() {
           <li>
             <Link
               href="https://resume.gaurabchhetri.com.np"
-              className={cn(buttonVariants({ variant: "default", size: "sm" }))}
+              className={cn(buttonVariants({ variant: "secondary", size: "sm" }))}
               target="_blank"
               rel="noopener noreferrer"
             >

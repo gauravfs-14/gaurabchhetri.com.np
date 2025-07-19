@@ -88,7 +88,7 @@ const skills = [
 
 export default function SkillsGrid() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
       <AnimatedBackground
         className="rounded-lg bg-card"
         transition={{
@@ -108,11 +108,11 @@ export default function SkillsGrid() {
                   hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
                   visible: { opacity: 1, y: 0, filter: "blur(0px)" },
                 }}
-                viewOptions={{ margin: "0px 0px -200px 0px" }}
+                viewOptions={{ margin: "0px 0px -100px 0px" }}
                 transition={{
                   duration: 0.3,
                   ease: "easeInOut",
-                  delay: 0.3 + idx * 0.05,
+                  delay: 0.15 + idx * 0.01,
                 }}
               >
                 <div

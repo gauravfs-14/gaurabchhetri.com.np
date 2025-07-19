@@ -30,7 +30,7 @@ export default async function ProjectsGrid() {
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
           }}
           viewOptions={{ margin: "0px 0px -100px 0px" }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: idx * 0.05 }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 + idx * 0.01 }}
         >
           <div className="relative w-full h-max overflow-hidden p-[1px] rounded-lg">
             <Spotlight

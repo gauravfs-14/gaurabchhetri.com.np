@@ -6,14 +6,14 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { InView } from "@/components/ui/in-view";
 import { cn } from "@/lib/utils";
-import { Calendar } from "lucide-react";
+import { ArrowUpRight, Calendar, Mail } from "lucide-react";
 import Link from "next/link";
 
 export const EDUCATION = [
   {
     title: "Bachelor of Science in Computer Science",
     institution: "Texas State University, San Marcos",
-    date: "Expected Graduation: May 2029",
+    date: "Expected Graduation: May 2028",
     description:
       "I am currently pursuing a Bachelor of Science in Computer Science at Texas State University, where I am learning and gaining hands-on experience in various aspects of computer science, in software development, data structures, algorithms, and web technologies.",
     skills: [
@@ -75,29 +75,36 @@ export default function Home() {
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
           }}
           viewOptions={{ margin: "0px 0px -100px 0px" }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
         >
-          <p className="text-muted-foreground">
+          {/* <p className="text-muted-foreground">
             Hello World <span className="text-xl">👋</span>, I specialize in
             building things that matters. Currently, I am an Undergraduate
             Research Assistant at the Texas State University, where I combine my
             skills in full-stack development with academic research to build
-            innovative tools and applications. The following are some tools from
-            my skill set that I use to build impactful projects.
+            innovative tools and applications. I believe in the{" "}
+            <strong>mantra</strong>: <em>"Do what you want, not what you can!"</em> If you want someone who can do things, not just talk about it, let&apos;s talk.
+          </p> */}
+          <p className="text-muted-foreground">
+            Hello World <span className="text-xl">👋</span>, I am a software engineer who builds things that matters. I firmly believe in the mantra: <em>"Do what you want, not what you can!"</em> If you want someone who can actually ship products and get things done, not just write code, let&apos;s have a chat.
           </p>
+          <div className="flex gap-4 mt-4">
+            <Link href="mailto:contact@gaurabchhetri.com.np" className={cn(buttonVariants({ variant: "default" }), "mt-4")}>contactMe <Mail className="w-4 h-4" /></Link>
+            <Link href="https://resume.gaurabchhetri.com.np" target="_blank" rel="noopener noreferrer" className={cn(buttonVariants({ variant: "ghost" }), "mt-4")}>viewResume <ArrowUpRight className="w-4 h-4" /></Link>
+          </div>
         </InView>
       </div>
       <div className="mt-14" />
       <div>
         <InView
           variants={{
-            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+            hidden: { opacity: 0, y: 0, filter: "blur(5px)" },
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
           }}
           viewOptions={{ margin: "0px 0px -100px 0px" }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.2 }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 }}
         >
-          <Badge variant={"secondary"}>Skills</Badge>
+          <Badge variant={"secondary"}>skills</Badge>
         </InView>
         <SkillsGrid />
       </div>
@@ -109,10 +116,10 @@ export default function Home() {
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
           }}
           viewOptions={{ margin: "0px 0px -100px 0px" }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0 }}
         >
           <Badge variant={"secondary"} className="mb-4">
-            Featured Projects
+            featuredProjects
           </Badge>
         </InView>
         <ProjectsGrid />
@@ -125,10 +132,10 @@ export default function Home() {
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
           }}
           viewOptions={{ margin: "0px 0px -100px 0px" }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.4 }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
         >
           <Badge variant={"secondary"} className="mb-4">
-            Recent Blogs
+            recentBlogs
           </Badge>
         </InView>
         <BlogsList itemsNumber={5} />
@@ -142,10 +149,10 @@ export default function Home() {
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
           }}
           viewOptions={{ margin: "0px 0px -100px 0px" }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.5 }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
         >
           <Badge variant={"secondary"} className="mb-4">
-            Education
+            education
           </Badge>
         </InView>
         {/* Resume Style Education */}
@@ -157,7 +164,7 @@ export default function Home() {
                 visible: { opacity: 1, y: 0, filter: "blur(0px)" },
               }}
               viewOptions={{ margin: "0px 0px -100px 0px" }}
-              transition={{ duration: 0.3, ease: "easeInOut", delay: 0.8 }}
+              transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 }}
               key={index}
             >
               <div key={index} className="mb-8 p-3">
@@ -168,7 +175,7 @@ export default function Home() {
                 <h3 className="text-lg font-semibold">{edu.title}</h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   {edu.institution}
-                </p>
+                </p>  
                 <p className="text-sm text-muted-foreground">
                   {edu.description}
                 </p>
@@ -193,10 +200,10 @@ export default function Home() {
             visible: { opacity: 1, y: 0, filter: "blur(0px)" },
           }}
           viewOptions={{ margin: "0px 0px -100px 0px" }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.7 }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
         >
           <Badge variant={"secondary"} className="mb-4">
-            Experience
+            experience
           </Badge>
         </InView>
         {/* Resume Style Experience */}
@@ -208,7 +215,7 @@ export default function Home() {
                 visible: { opacity: 1, y: 0, filter: "blur(0px)" },
               }}
               viewOptions={{ margin: "0px 0px -100px 0px" }}
-              transition={{ duration: 0.3, ease: "easeInOut", delay: 0.8 }}
+              transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 }}
               key={index}
             >
               <div className="mb-8 p-3">
