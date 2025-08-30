@@ -1,0 +1,77 @@
+---
+name: Bhanai - A Custom Programming Language with a Nepali Touch
+author: Gaurab Chhetri
+description: Bhanai is a simple and intuitive programming language with a Nepali touch. It leverages Node.js under the hood for execution, allowing users to create `.bhn` files and run them seamlessly. 
+image: bhanai.png
+languages: ["JavaScript"]
+tags: ["JavaScript", "node", "custom-programming-language", "bhanai"]
+type: Personal
+featured: true
+githubUrl: https://github.com/gauravfs-14/bhanai
+liveUrl: https://www.npmjs.com/package/bhanai
+---
+
+
+**Bhanai** began as a passion project during my exploration of language design and compiler concepts. Inspired by Bhai Lang [^1], I wondered: *what if programming felt closer to home, using the words we speak every day?* That question became the seed for Bhanai.
+
+At its core, Bhanai is a **simple and intuitive programming language** with Nepali-inspired syntax. Instead of `let` or `const`, you write `rakha` (to keep) and `sadai_rakha` (to always keep). Instead of `if`, you write `yadi` (if). To print output, you use `bhanai` (to speak). These cultural touches transform programming into something more familiar and engaging.
+
+Built on **Node.js**, Bhanai supports the essentials:  
+- Variables and constants  
+- Arithmetic and logical operations  
+- Strings, arrays, and objects  
+- Conditional statements and loops  
+- Console input and output  
+
+You write code in a `.bhn` file and run it with the `chalau` command, making the experience both playful and practical.  
+
+### Example Program
+
+```bhn
+tippani This is a sample code for the Bhanai Programming Language
+
+rakha("name", "Bhanai User")
+sadai_rakha("PI", 3.14159)
+
+rakha("sum", jod(10, 20))
+bhanai("Hello, " + name + "! Sum of 10 and 20 is: " + sum)
+
+# String manipulation
+rakha("greeting", "Namaste")
+rakha("fullGreeting", jodString(greeting, " Swagat chha Bhanai ma!"))
+bhanai("Full Greeting: " + fullGreeting)
+
+yadi age < 18:
+    bhanai("Timro umar kam chha.")
+athawa age == 18:
+    bhanai("Timro umar 18 chha.")
+aru:
+    bhanai("Timro umar thik chha.")
+```
+
+## Why It Matters
+
+Bhanai is not about replacing existing languages, it’s about showing how code can carry culture. For programmers in Nepal, it a playful activity to write in the langugage they understand. For me, it was an opportunity to dive deep into how interpreters and execution environments work, and to build something end-to-end that reflects both engineering and identity.
+
+The language currently supports only basic constructs, but I plan to expand it over time. Every new feature is not just an upgrade to Bhanai, but also a way for me to learn more about language design and compilers.
+
+## Resources 
+
+I used plenty of online resources while learning to build something like this. I am listing out a few for y'all, if you also wanted to learn building a programming language actually works.
+
+- https://www.freecodecamp.org/news/create-your-own-programming-language-using-python/
+- https://hackernoon.com/building-your-own-programming-language-from-scratch
+- https://www.freecodecamp.org/news/the-programming-language-pipeline-91d3f449c919/
+- https://www.youtube.com/watch?v=1WpKsY9LBlY
+- https://youtu.be/rTuTLc_u6qw?si=l__dfFuH77jtXv-9
+- https://youtu.be/Q2UDHY5as90?si=9Yy9Hfv2uxInwV_k
+
+---
+
+👉 [View on GitHub](https://github.com/gauravfs-14/bhanai) | [NPM Package](https://www.npmjs.com/package/bhanai)
+
+> 💡 Contributions are welcome! If you’d like to add features, open a PR. And if you just enjoy the idea, leaving a ⭐ on the repo would mean a lot.
+
+## References
+
+[^1]: https://bhailang.js.org/

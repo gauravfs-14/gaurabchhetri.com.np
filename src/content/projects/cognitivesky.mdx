@@ -1,0 +1,79 @@
+---
+name: CognitiveSky - Scalable Sentiment and Narrative Analysis for Decentralized Social Media
+author: Gaurab Chhetri
+description: CognitiveSky is an open-source research infrastructure for analyzing mental health narratives on Bluesky, combining real-time ingestion, NLP pipelines, and an interactive Next.js dashboard. Accepted for presentation at HICSS 2026. The paper will be made after the presentation at the conference.
+image: cognitivesky.jpg
+languages: ["Python", "TypeScript"]
+tags: ["AI", "Cognitive Computing", "Machine Learning", "Web Development"]
+type: Research
+featured: true
+liveUrl: https://cognitivesky.gaurabchhetri.com.np/
+githubUrl: https://github.com/gauravfs-14/CognitiveSky
+---
+
+**CognitiveSky** is a research platform and interactive dashboard for exploring mental health narratives on the **Bluesky decentralized social network**.  
+It was built to answer an important question: *how can we track and understand large-scale discussions on mental health in real time?*
+
+Inspired by TwiXplorer [^1], CognitiveSky integrates **streaming data ingestion**, **state-of-the-art NLP labeling**, and **interactive visualization** into a single open-source framework. It has been **accepted for presentation at HICSS 2026** (HICSS-59) [^2], highlighting its contribution to computational social science and mental health research.
+
+## Highlights
+
+- **Real-time ingestion** of public mental-health-related posts via the Bluesky Firehose API.  
+- **Automated NLP pipelines** for sentiment, emotion, and topic detection using pre-trained transformer models.  
+- **Daily reproducible snapshots** stored in Turso (libSQL) and exported as JSON for transparency and reuse.  
+- **Interactive Next.js dashboard** for exploring narratives, topics, hashtags, and engagement trends.  
+- **Fully open-source** with reproducible pipelines, making it accessible to researchers and developers.  
+
+> 🖥️ **Live Dashboard:** https://cognitivesky.gaurabchhetri.com.np/
+
+> 📑 **Paper:** Accepted at HICSS 2026 (link will be available after presentation)
+
+## System Overview
+
+CognitiveSky is powered by two main components:
+
+### 1. **`mh_worker` (Data Ingestion)**  
+- Node.js worker running 24/7 on Oracle Cloud free-tier VM  
+- Streams Bluesky posts using the Firehose API  
+- Filters for mental health keywords and stores posts in Supabase  
+
+### 2. **`summary.py` (Labeling & Summarization)**  
+- Python-based NLP pipeline triggered daily via GitHub Actions  
+- Performs:
+  - Sentiment analysis (`cardiffnlp/twitter-roberta-base-sentiment`)  
+  - Emotion detection (`j-hartmann/emotion-english-distilroberta-base`)  
+  - Topic modeling (TF-IDF + NMF)  
+- Migrates labeled data to Turso DB  
+- Generates JSON summaries (`sentiments.json`, `emotions.json`, `topics.json`, `hashtags.json`, etc.)  
+
+These summaries power the interactive dashboard and allow temporal analysis of narratives.
+
+## Dashboard
+
+The dashboard is built with **Next.js + Tailwind + Recharts** and provides:  
+- **Topic timelines:** How sentiment/emotion shifts across major discussions  
+- **Hashtag & emoji analysis:** Cultural and emotional signals in conversations  
+- **Engagement insights:** Most active users, posts, and community trends  
+- **Narrative evolution:** Tracking shifts in discourse over days and weeks  
+
+## Impact
+
+CognitiveSky demonstrates how **AI, decentralized platforms, and open data** can come together to support research in public health and online discourse. Its contributions include:  
+
+- A **scalable, reproducible framework** for analyzing social narratives  
+- A working example of **24/7 ingestion + NLP labeling + visualization**  
+- A tool that researchers and advocates can extend to other domains beyond mental health  
+
+By combining technical rigor with accessibility, CognitiveSky bridges the gap between **raw social media data** and **actionable insights**.
+
+## Acknowledgements  
+
+- **AIT Lab (Texas State University) [^3]:** Mentorship and research guidance  
+- **Bluesky Community:** Open Firehose access and documentation  
+- **Supabase + Turso:** Database support for real-time and labeled data  
+- **Hugging Face Transformers:** Pre-trained models for sentiment and emotion detection  
+
+## References
+[^1]: https://github.com/smash-edin/twixplorer
+[^2]: https://hicss.hawaii.edu/
+[^3]: https://ait-lab.vercel.app

@@ -1,0 +1,67 @@
+---
+name: ResQMe - AI-Powered Emergency Response System
+author: Gaurab Chhetri
+description: ResQMe is an AI-driven emergency response platform built at RiverHacks 2025, winning SerpApi’s Community Engagement Track ($3,000 prize). It combines SOS triggers via iMessage, AI-based triage, real-time responder dashboards, and live context fetching to deliver rapid, context-aware emergency aid.
+image: resqme.png
+languages: ["TypeScript"]
+tags: ["AI", "Hackathon", "Emergency Tech", "Public Safety"]
+type: Hackathon
+featured: false
+githubUrl: https://github.com/gauravfs-14/ResQMe
+liveUrl: https://res-q-me.vercel.app
+---
+
+**ResQMe** is an AI-powered emergency response system that we built during **RiverHacks 2025 in Austin**. Over an intense 30-hour sprint with little to no sleep, our team designed and developed the platform to tackle public safety and accessibility challenges identified by the City of Austin.  
+
+The project went on to **win SerpApi’s [^1] Community Engagement Track**, bringing home a **$3,000 prize**.  
+
+## What It Does
+
+ResQMe brings together **real-time data and AI** to connect people in distress with nearby responders, ensuring faster, more informed assistance.  
+
+Core features include:  
+- 📱 **SOS triggers via iMessage (LoopMessage) [^2]** – simple, message-based distress calls  
+- 🤖 **AI triage engine** – severity prediction and next-step guidance using WebAI’s Navigator [^3]  
+- 📊 **Responder dashboard** – real-time monitoring of incidents with severity, user profile, and location  
+- 🌎 **Contextual data fetching** – nearby hospitals, police stations, fire stations, and live weather via SerpApi [^1]  
+
+## Architecture
+
+- **Frontend:** Next.js, Tailwind CSS, TypeScript  
+- **Backend:** Node.js (Express), Prisma ORM  
+- **Database:** PostgreSQL  
+- **AI/Triage:** WebAI Navigator (local LLM API)  
+- **Messaging:** LoopMessage (SMS/iMessage integration for SOS triggers)  
+- **Deployment:** Vercel / Render  
+- **External APIs:** SerpApi for geolocation context  
+
+The system was split into modular apps:  
+- **User Profile App** for emergency info & contacts  
+- **SOS System Backend** for incoming triggers & routing  
+- **Responder Dashboard** for responders to track incidents  
+- **NearbyMe** for fetching live hospitals, police/fire stations, and weather data  
+
+## Hackathon Highlights
+
+- 🏆 **Winner** – SerpApi’s Community Engagement Track  
+- 💰 **Prize** – $3,000  
+- ⏱️ Built in under **30 hours** with a 5-member team  
+- 🌐 Tackled **public safety challenges** in collaboration with the City of Austin  
+- 🤝 Strong support and mentorship from **WebAI, SerpApi, and LoopMessage**  
+
+## Team
+
+ResQMe was built by a collaborative team: **Amul Poudel** [^4], **Dipesh Pandit** [^5], **Diwas Pandit** [^6], **Samar Ranjit** [^7] and me.  
+
+## Why It Matters
+
+In emergencies, seconds matter. ResQMe streamlines the process of **calling for help, triaging severity, and guiding responders** with the right context, all with minimal effort from the user. By combining **LLM-driven reasoning** with **location-aware data**, the system showcases how AI can play a role in making public safety more accessible, responsive, and community-driven.  
+
+## References 
+[^1]: https://serpapi.com/
+[^2]: https://loopmessage.com/
+[^3]: https://www.webai.com/
+[^4]: https://www.linkedin.com/in/amulpoudel/
+[^5]: https://www.linkedin.com/in/dipeshpandit12/
+[^6]: https://www.linkedin.com/in/diwaspandit12/
+[^7]: https://www.linkedin.com/in/samarranjit/

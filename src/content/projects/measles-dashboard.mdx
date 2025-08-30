@@ -1,0 +1,70 @@
+---
+name: Measles Dashboard - Visualizing Outbreaks and Vaccination Gaps
+author: Gaurab Chhetri
+description: An interactive Next.js dashboard that tracks measles activity, vaccination coverage, and temporal trends for West Texas, built for fast situational awareness and public health decision support.
+image: measles.png
+languages: ["TypeScript"]
+tags: ["Public Health", "Data Visualization", "Next.js", "React", "Epidemiology"]
+type: Personal
+featured: false
+githubUrl: https://github.com/gauravfs-14/measles-dashboard
+liveUrl: https://measles-dashboard.vercel.app/
+---
+
+**Measles Dashboard** is a focused public health tool that helps analysts and community stakeholders answer three questions quickly: **where are cases rising**, **who is under-protected**, and **how are trends shifting over time**. I built it to turn scattered updates into a clear, trusted picture for West Texas.
+
+## Highlights
+
+- **Interactive map** with county level case counts and vaccination signals  
+- **Trend views** for recent activity and historical comparisons  
+- **Coverage insights** that highlight low vaccination pockets  
+- **Fast, mobile friendly UI** optimized for quick triage and public communication
+
+> Live site: **https://measles-dashboard.vercel.app/**
+
+## What it shows
+
+- **Cases**: rolling counts and week over week change  
+- **Vaccination**: coverage bands and gaps by county or age group when available  
+- **Context**: seasonal patterns and recent alerts summarized into readable cards
+
+Data source: Texas Department of State Health Services (DSHS TX). See current alerts at  
+https://www.dshs.texas.gov/news-alerts
+
+## Tech Overview
+
+- **Frontend**: Next.js, React, TypeScript  
+- **UI**: Tailwind CSS, shadcn/ui  
+- **Charts**: Recharts  
+- **State**: React Context for filters and selections  
+- **Hosting**: Vercel
+
+Design choices focus on a small dependency footprint, smooth interactions on low power devices, and clear color and typography defaults for accessibility.
+
+## Interaction Model
+
+- **Filter** by county or region  
+- **Hover or tap** to reveal case counts and vaccination context  
+- **Compare** time windows to spot acceleration or slowdown  
+- **Share** direct links to a selected view
+
+These interactions keep the flow simple for non technical users while still supporting deeper exploration.
+
+## Data Flow
+
+1. **Ingest** official updates and reports from DSHS TX  
+2. **Normalize** and store as lightweight JSON for the web app  
+3. **Render** maps and charts from a single typed data layer
+
+Planned additions include automatic refresh hooks and provenance notes per update.
+
+## Impact
+
+- Faster situational awareness for communities and campus stakeholders  
+- Clear communication of where coverage lags  
+- Modular codebase that can be reused for other communicable disease trackers
+
+## Acknowledgments
+
+- Data and alerts from **Texas Department of State Health Services**  
+- Map stack inspired by Leaflet patterns and React mapping guides 

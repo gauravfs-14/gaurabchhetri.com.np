@@ -1,0 +1,48 @@
+---
+name: VidXiv - ArXiv Paper to Video Generator
+author: Gaurab Chhetri
+description: VidXiv automatically converts research papers from ArXiv into engaging narrated videos with scene-by-scene breakdowns, AI-generated scripts, and export-ready MP4s for YouTube or Shorts.
+image: vidxiv.png
+languages: ["Python"]
+tags: ["AI", "Video Generation", "Research Communication", "Streamlit"]
+type: Personal
+featured: false
+githubUrl: https://github.com/gauravfs-14/vidxiv
+---
+
+**VidXiv** is a tool I created to make research more accessible. Academic papers are essential for progress, but they are often dense and intimidating for people outside of research. VidXiv bridges that gap by turning **ArXiv papers into short, narrated videos**, something that can be shared on YouTube, TikTok, or Instagram Reels.  
+
+The goal is simple: help researchers, educators, and science communicators transform complex ideas into **engaging visual stories** that reach a wider audience.
+
+## What It Does
+
+- **Fetches papers by ArXiv ID** and parses the PDF content  
+- **Generates a video script with AI (Gemini)**, summarizing each section into digestible narration  
+- **Builds scene-by-scene videos** with text overlays, transitions, and optional background music  
+- **Narrates with TTS voices** so the videos are watchable without extra editing  
+- **Supports multiple formats** (16:9 for YouTube, 9:16 for Shorts/Reels)  
+
+Here’s the flow: you paste a paper ID → AI writes a script → VidXiv builds scenes → you download a ready-to-share MP4.
+
+## Example Workflow
+
+1. Enter a paper ID (e.g., `2401.06015`) into the Streamlit app  
+2. AI condenses the paper into a script with scene segments  
+3. Text overlays and narration are generated for each scene  
+4. Figures and diagrams (future feature) can be auto-extracted or manually added  
+5. Export as a polished video ready for YouTube or social platforms  
+
+## Why I Built It
+
+Researchers work hard to publish, but outside academia, papers rarely get read. I wanted to create a tool that makes **knowledge portable, shareable, and accessible** in the formats people already consume daily, short videos.  
+
+VidXiv is also a learning project for me, blending **LLM prompting, PDF parsing, text-to-speech, and video editing** into one pipeline. It is both a research communication tool and a technical challenge in AI + media generation.
+
+## Impact
+
+VidXiv is a step toward making science more open and approachable. Instead of a 15-page PDF, someone can watch a 2-minute explainer. For me, it is also part of a larger vision of blending **AI, research, and storytelling** to democratize knowledge.  
+
+The AIT Lab at Texas State University [^1] is already using this tool to summarize the survey papers. See https://ait-lab.vercel.app/story/survey-tinyml for example.
+
+## References 
+[^1]: https://ait-lab.vercel.app
