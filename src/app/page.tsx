@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { ArrowRight, ArrowUpRight, Calendar, Mail } from "lucide-react";
 import Link from "next/link";
 
-export const EDUCATION = [
+const EDUCATION = [
   {
     title: "Bachelor of Science in Computer Science",
     institution: "Texas State University, San Marcos",
@@ -29,7 +29,7 @@ export const EDUCATION = [
   },
 ];
 
-export const EXPERIENCE = [
+const EXPERIENCE = [
   {
     title: "Undergraduate Research Assistant",
     institution: "AIT Lab - TXST",
@@ -53,7 +53,7 @@ export const EXPERIENCE = [
   },
 ];
 
-export const RESEARCH_PUBLICATIONS = [
+const RESEARCH_PUBLICATIONS = [
   {
     title: "Model Context Protocols in Adaptive Transport Systems: A Survey",
     date: "2025/8/26",

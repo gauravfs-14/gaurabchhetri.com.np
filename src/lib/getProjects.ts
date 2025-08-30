@@ -12,6 +12,9 @@ interface ProjectMeta {
   githubUrl?: string;
   languages: string[];
   tags: string[];
+  featured: boolean;
+  paperUrl?: string;
+  type: string;
 }
 
 export interface Project {

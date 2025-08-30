@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import {
@@ -9,7 +10,7 @@ import {
   type SpringOptions,
   AnimatePresence,
 } from "motion/react";
-import {
+import React, {
   Children,
   cloneElement,
   createContext,
@@ -165,9 +166,15 @@ function DockItem({ children, className, onClick }: DockItemProps) {
       aria-haspopup="true"
       onClick={onClick}
     >
-      {Children.map(children, (child) =>
-        cloneElement(child as React.ReactElement, { width, isHovered })
-      )}
+      {Children.map(children, (child) => {
+        if (React.isValidElement(child)) {
+          return cloneElement(child, { 
+            width, 
+            isHovered 
+          } as any);
+        }
+        return child;
+      })}
     </motion.div>
   );
 }
