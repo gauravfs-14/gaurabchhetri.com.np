@@ -1,0 +1,48 @@
+import ProjectsGrid from "@/components/projects-grid";
+import ProjectsList from "@/components/projects-list";
+import { Badge } from "@/components/ui/badge";
+import { InView } from "@/components/ui/in-view";
+
+export default async function Page() {
+  return (
+    <div className="container max-w-3xl mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-4 text-center">Projects</h1>
+      <p className="text-muted-foreground text-center mb-14 text-sm max-w-[70%] mx-auto">
+        Here are some of the projects I have worked on. Feel free to explore and
+        engage with the content.
+      </p>
+      <section id="projects" className="scroll-mt-50">
+        <InView
+          variants={{
+            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+          }}
+          viewOptions={{ margin: "0px 0px -100px 0px" }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0 }}
+        >
+          <Badge variant={"secondary"} className="mb-4">
+            featuredProjects
+          </Badge>
+        </InView>
+        <ProjectsGrid displayFeaturesOnly={true} />
+      </section>
+      <div className="mt-14" />
+      <section id="allProjects" className="scroll-mt-50">
+        <InView
+          variants={{
+            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+          }}
+          viewOptions={{ margin: "0px 0px -100px 0px" }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0 }}
+        >
+          <Badge variant={"secondary"} className="mb-4">
+            allProjects
+          </Badge>
+        </InView>
+        <ProjectsGrid displayFeaturesOnly={false} />
+      </section>
+      <div className="mt-20" />
+    </div>
+  );
+}

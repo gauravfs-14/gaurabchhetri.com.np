@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { InView } from "@/components/ui/in-view";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, Calendar, Mail } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Calendar, Mail } from "lucide-react";
 import Link from "next/link";
 
 export const EDUCATION = [
@@ -104,7 +104,7 @@ export default function Home() {
           viewOptions={{ margin: "0px 0px -100px 0px" }}
           transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 }}
         >
-          <Badge variant={"secondary"}>skills</Badge>
+          <Badge variant={"secondary"}>tookKit</Badge>
         </InView>
         <SkillsGrid />
       </div>
@@ -122,76 +122,25 @@ export default function Home() {
             featuredProjects
           </Badge>
         </InView>
-        <ProjectsGrid />
+        <ProjectsGrid displayFeaturesOnly={true} />
       </section>
-      <div className="mt-14" />
-      <section id="blogs" className="scroll-mt-50">
-        <InView
-          variants={{
-            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
-            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-          }}
-          viewOptions={{ margin: "0px 0px -100px 0px" }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
-        >
-          <Badge variant={"secondary"} className="mb-4">
-            recentBlogs
-          </Badge>
-        </InView>
-        <BlogsList itemsNumber={5} />
-      </section>
-      <div className="mt-20" />
-      {/* Education Section */}
-      <div>
-        <InView
-          variants={{
-            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
-            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-          }}
-          viewOptions={{ margin: "0px 0px -100px 0px" }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
-        >
-          <Badge variant={"secondary"} className="mb-4">
-            education
-          </Badge>
-        </InView>
-        {/* Resume Style Education */}
-        <div className="flex flex-col gap-8">
-          {EDUCATION.map((edu, index) => (
-            <InView
-              variants={{
-                hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
-                visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-              }}
-              viewOptions={{ margin: "0px 0px -100px 0px" }}
-              transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 }}
-              key={index}
-            >
-              <div key={index} className="mb-8 p-3">
-                <p className="text-sm text-muted-foreground font-medium mb-2">
-                  <Calendar className="inline mr-1 w-4 h-4" />
-                  {edu.date}
-                </p>
-                <h3 className="text-lg font-semibold">{edu.title}</h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  {edu.institution}
-                </p>  
-                <p className="text-sm text-muted-foreground">
-                  {edu.description}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {edu.skills.map((skill, skillIndex) => (
-                    <Badge key={skillIndex} variant="outline">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-            </InView>
-          ))}
+      <div className="mt-4" />
+      <InView
+        variants={{
+          hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+        }}
+        viewOptions={{ margin: "0px 0px -100px 0px" }}
+        transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
+      >
+        <div className="w-full flex justify-end">
+        <Link href="/projects" className={cn(buttonVariants({ variant: "default", size: "sm" }), "mt-4")}>
+          viewAllProjects <ArrowRight className="w-4 h-4" />
+        </Link>
         </div>
-      </div>
-      <div className="mt-20" />
+      </InView>
+      <div className="mt-14" />
+      {/* <div className="mt-20" /> */}
       {/* Experience Section */}
       <div>
         <InView
@@ -253,6 +202,92 @@ export default function Home() {
           ))}
         </div>
       </div>
+      <div className="mt-8" />
+      {/* Education Section */}
+      <div>
+        <InView
+          variants={{
+            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+          }}
+          viewOptions={{ margin: "0px 0px -100px 0px" }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
+        >
+          <Badge variant={"secondary"} className="mb-4">
+            education
+          </Badge>
+        </InView>
+        {/* Resume Style Education */}
+        <div className="flex flex-col gap-8">
+          {EDUCATION.map((edu, index) => (
+            <InView
+              variants={{
+                hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+                visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+              }}
+              viewOptions={{ margin: "0px 0px -100px 0px" }}
+              transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 }}
+              key={index}
+            >
+              <div key={index} className="mb-8 p-3">
+                <p className="text-sm text-muted-foreground font-medium mb-2">
+                  <Calendar className="inline mr-1 w-4 h-4" />
+                  {edu.date}
+                </p>
+                <h3 className="text-lg font-semibold">{edu.title}</h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  {edu.institution}
+                </p>  
+                <p className="text-sm text-muted-foreground">
+                  {edu.description}
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {edu.skills.map((skill, skillIndex) => (
+                    <Badge key={skillIndex} variant="outline">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            </InView>
+          ))}
+        </div>
+      </div>
+      <div className="mt-8" />
+
+      <section id="blogs" className="scroll-mt-50">
+        <InView
+          variants={{
+            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+          }}
+          viewOptions={{ margin: "0px 0px -100px 0px" }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
+        >
+          <Badge variant={"secondary"} className="mb-4">
+            recentBlogs
+          </Badge>
+        </InView>
+        <BlogsList itemsNumber={5} />
+      </section>
+      <div className="mt-4" />
+      <InView
+        variants={{
+          hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+        }}
+        viewOptions={{ margin: "0px 0px -100px 0px" }}
+        transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
+      >
+        <div className="w-full flex justify-end">
+        <Link href="/blogs" className={cn(buttonVariants({ variant: "default", size: "sm" }), "mt-4")}>
+          viewAllBlogs <ArrowRight className="w-4 h-4" />
+        </Link>
+        </div>
+      </InView>
+      
+      <div className="mt-14" />
+      
       <div className="mt-20" />
     </main>
   );

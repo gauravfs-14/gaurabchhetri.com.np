@@ -1,7 +1,6 @@
 import { AnimatedBackground } from "@/components/ui/animated-background";
 import { InView } from "@/components/ui/in-view";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import { getPosts } from "@/app/blogs/utils";
 import { Calendar } from "lucide-react";
 
