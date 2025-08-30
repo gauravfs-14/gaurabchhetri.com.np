@@ -1,7 +1,6 @@
 import BlogsList from "@/components/blogs-list";
 import ProfileCard from "@/components/profile-card";
 import ProjectsGrid from "@/components/projects-grid";
-import SkillsGrid from "@/components/skills-grid";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { InView } from "@/components/ui/in-view";
@@ -141,7 +140,7 @@ export default function Home() {
         </InView>
       </div>
       <div className="mt-14" />
-      <div>
+      {/* <div>
         <InView
           variants={{
             hidden: { opacity: 0, y: 0, filter: "blur(5px)" },
@@ -153,7 +152,7 @@ export default function Home() {
           <Badge variant={"secondary"}>tookKit</Badge>
         </InView>
         <SkillsGrid />
-      </div>
+      </div> */}
       <div className="mt-14" />
       <section id="projects" className="scroll-mt-50">
         <InView
