@@ -3,6 +3,7 @@ import { buttonVariants } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
 import { InView } from "./ui/in-view";
+import { SiGooglescholar } from "react-icons/si";
 
 export default function NavBar() {
   return (
@@ -130,6 +131,25 @@ export default function NavBar() {
                 rel="noopener noreferrer"
               >
                 <Linkedin className="inline ml w-4 h-4" />
+              </Link>
+            </li>
+          </InView>
+          <InView
+            variants={{
+              hidden: { opacity: 0, y: -20, filter: "blur(5px)" },
+              visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+            }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewOptions={{ margin: "0px 0px -200px 0px" }}
+          >
+            <li className="-mx-2">
+              <Link
+                href="https://scholar.google.com/citations?user=NRzdAVEAAAAJ&hl=en"
+                className={cn(buttonVariants({ variant: "ghost", size: "sm" }))}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <SiGooglescholar className="inline ml w-4 h-4" />
               </Link>
             </li>
           </InView>

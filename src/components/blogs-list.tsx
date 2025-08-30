@@ -38,7 +38,7 @@ export default async function BlogsList({
             <div
               key={idx}
               data-id={`card-${idx}`}
-              className="cursor-pointer p-3 w-full"
+              className="cursor-pointer p-3 w-full mb-4"
             >
               <InView
                 key={post.slug}
@@ -59,7 +59,7 @@ export default async function BlogsList({
                   className="w-full"
                 >
                   <div className="w-full">
-                    <p className="text-sm text-muted-foreground font-medium mb-2">
+                    <p className="text-sm text-muted-foreground font-medium mb-2 flex items-center gap-1">
                       <Calendar className="inline mr-1 w-4 h-4" />
                       {new Date(post.meta.date).toLocaleDateString("en-US", {
                         year: "numeric",
@@ -68,9 +68,9 @@ export default async function BlogsList({
                       })}
                     </p>
                     <h2 className="text-xl font-semibold">
-                      <span className="group relative inline-block font-semibold text-lg line-clamp-1">
+                      <span className="group relative inline-block font-semibold text-lg line-clamp-1 hover:underline">
                         {post.meta.title}
-                        <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-foreground transition-all duration-200 group-hover:max-w-full"></span>
+                        {/* <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-foreground transition-all duration-200 group-hover:max-w-full"></span> */}
                       </span>
                     </h2>
                   </div>

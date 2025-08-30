@@ -82,21 +82,21 @@ export default async function Page({
         {meta.liveUrl && (
           <div className="flex justify-center">
             <a href={meta.liveUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant="default" size={"sm"} className="cursor-pointer">viewLive <Eye className="w-4 h-4" /></Button>
+              <Button variant={"default"} size={"sm"} className="cursor-pointer">viewLive <Eye className="w-4 h-4" /></Button>
               </a>
             </div>
           )}
         {meta.githubUrl && (
           <div className="flex justify-center">
             <a href={meta.githubUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size={"sm"} className="cursor-pointer">viewCode <Github className="w-4 h-4" /></Button>
+              <Button variant={meta.liveUrl ? "ghost" : "default"} size={"sm"} className="cursor-pointer">viewCode <Github className="w-4 h-4" /></Button>
             </a>
           </div>
         )}
         {meta.paperUrl && (
           <div className="flex justify-center">
             <a href={meta.paperUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size={"sm"} className="cursor-pointer">readPaper <ArrowUpRight className="w-4 h-4" /></Button>
+              <Button variant={meta.liveUrl || meta.githubUrl ? "ghost" : "default"} size={"sm"} className="cursor-pointer">readPaper <ArrowUpRight className="w-4 h-4" /></Button>
             </a>
           </div>
         )}
@@ -107,7 +107,7 @@ export default async function Page({
               src={`/projects/${meta.image}`}
               alt={meta.name}
               fill
-              className="object-cover rounded-lg transition-all duration-300 ease-in-out bg-white p-2"
+              className="object-contain rounded-lg transition-all duration-300 ease-in-out bg-white p-2"
             />
           </div>
         )}

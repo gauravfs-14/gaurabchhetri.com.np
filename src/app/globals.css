@@ -232,4 +232,9 @@ pre > code {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+* {
+  scroll-snap-align: start;
+  scroll-padding: 150px;
+}
 }

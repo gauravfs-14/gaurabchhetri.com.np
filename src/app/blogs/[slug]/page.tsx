@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { getPosts, Post } from "../utils";
 import Image from "next/image";
-import ShareButtons from "../share-buttons";
+// import ShareButtons from "../share-buttons";
 
 export async function generateStaticParams() {
   const posts = (await getPosts()).map(async (post) => await post);
@@ -89,7 +89,7 @@ export default async function Page({
         )}
         <Post />
       </div>
-      <ShareButtons slug={slug} frontmatter={meta} />
+      {/* <ShareButtons slug={slug} frontmatter={meta} /> */}
     </>
   );
 }
