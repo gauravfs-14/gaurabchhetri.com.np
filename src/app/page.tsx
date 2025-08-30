@@ -1,4 +1,4 @@
-import BlogsList from "@/components/blogs-list";
+import DevLogsList from "@/components/dev-logs-list";
 import ProfileCard from "@/components/profile-card";
 import ProjectsGrid from "@/components/projects-grid";
 import { Badge } from "@/components/ui/badge";
@@ -301,7 +301,7 @@ export default function Home() {
       </div>
       <div className="mt-8" />
 
-      <section id="blogs" className="scroll-mt-50">
+      <section id="devLogs" className="scroll-mt-50">
         <InView
           variants={{
             hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
@@ -311,10 +311,10 @@ export default function Home() {
           transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
         >
           <Badge variant={"secondary"} className="mb-4">
-            recentBlogs
+            recentDevLogs
           </Badge>
         </InView>
-        <BlogsList itemsNumber={5} />
+        <DevLogsList itemsNumber={5} />
       </section>
       <div className="mt-4" />
       <InView
@@ -326,8 +326,8 @@ export default function Home() {
         transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
       >
         <div className="w-full flex justify-end">
-        <Link href="/blogs" className={cn(buttonVariants({ variant: "default", size: "sm" }), "mt-4")}>
-          viewAllBlogs <ArrowRight className="w-4 h-4" />
+        <Link href="/devLogs" className={cn(buttonVariants({ variant: "default", size: "sm" }), "mt-4")}>
+          viewAllDevLogs <ArrowRight className="w-4 h-4" />
         </Link>
         </div>
       </InView>

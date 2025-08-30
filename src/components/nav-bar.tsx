@@ -82,13 +82,13 @@ export default function NavBar() {
             >
               <li className="hidden sm:block">
                 <Link
-                  href="/blogs"
+                  href="/devLogs"
                   className={cn(
                     buttonVariants({ variant: "link", size: "lg" }),
                     "px-0 text-foreground hover:text-primary"
                   )}
                 >
-                  blogs
+                  devLogs
                 </Link>
               </li>
             </InView>
@@ -259,14 +259,14 @@ export default function NavBar() {
                   projects
                 </Link>
                 <Link
-                  href="/blogs"
+                  href="/devLogs"
                   onClick={closeDrawer}
                   className={cn(
                     buttonVariants({ variant: "ghost" }),
                     "w-full justify-start text-base"
                   )}
                 >
-                  blogs
+                  devLogs
                 </Link>
                 <Link
                   href="https://resume.gaurabchhetri.com.np"

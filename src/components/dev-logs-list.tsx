@@ -1,10 +1,10 @@
 import { AnimatedBackground } from "@/components/ui/animated-background";
 import { InView } from "@/components/ui/in-view";
 import Link from "next/link";
-import { getPosts } from "@/app/blogs/utils";
+import { getPosts } from "@/app/devLogs/utils";
 import { Calendar } from "lucide-react";
 
-export default async function BlogsList({
+export default async function DevLogsList({
   itemsNumber = 20,
   pagination = false,
   startIndex = 0,
@@ -55,7 +55,7 @@ export default async function BlogsList({
               >
                 <Link
                   key={post.slug}
-                  href={`/blogs/${post.slug}`}
+                  href={`/devLogs/${post.slug}`}
                   className="w-full"
                 >
                   <div className="w-full">

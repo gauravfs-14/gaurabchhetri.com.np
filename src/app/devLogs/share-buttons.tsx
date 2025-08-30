@@ -25,10 +25,10 @@ export default function ShareButtons({
       title: "Facebook",
       icon: (
         <FacebookShareButton
-          url={`${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${slug}`}
+          url={`${process.env.NEXT_PUBLIC_BASE_URL}/devLogs/${slug}`}
           title={meta.title}
           quote={meta.description || "Check out this blog post!"}
-          hashtag={`#${meta.tags?.[0] || "blog"}`}
+          hashtag={`#${meta.tags?.[0] || "devLog"}`}
         >
           <SiFacebook className="h-5 w-5" />
         </FacebookShareButton>
@@ -38,7 +38,7 @@ export default function ShareButtons({
       title: "Share on X",
       icon: (
         <TwitterShareButton
-          url={`${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${slug}`}
+          url={`${process.env.NEXT_PUBLIC_BASE_URL}/devLogs/${slug}`}
           title={meta.title}
           hashtags={meta.tags || ["blog"]}
         >
@@ -50,7 +50,7 @@ export default function ShareButtons({
       title: "LinkedIn",
       icon: (
         <LinkedinShareButton
-          url={`${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${slug}`}
+          url={`${process.env.NEXT_PUBLIC_BASE_URL}/devLogs/${slug}`}
           title={meta.title}
           summary={meta.description || "Check out this blog post!"}
         >
@@ -62,7 +62,7 @@ export default function ShareButtons({
       title: "WhatsApp",
       icon: (
         <WhatsappShareButton
-          url={`${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${slug}`}
+          url={`${process.env.NEXT_PUBLIC_BASE_URL}/devLogs/${slug}`}
           title={meta.title}
           separator=":: "
         >
@@ -76,7 +76,7 @@ export default function ShareButtons({
         <Button
           onClick={() => {
             navigator.clipboard.writeText(
-              `${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${slug}`
+              `${process.env.NEXT_PUBLIC_BASE_URL}/devLogs/${slug}`
             );
             alert("Link copied to clipboard!");
           }}
