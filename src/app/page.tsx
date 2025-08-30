@@ -131,7 +131,7 @@ export default function Home() {
             <strong>mantra</strong>: <em>"Do what you want, not what you can!"</em> If you want someone who can do things, not just talk about it, let&apos;s talk.
           </p> */}
           <p className="text-muted-foreground">
-            Hello World <span className="text-xl">👋</span>, I am a software engineer who builds things that matters. I firmly believe in the mantra: <em>"Do what you want, not what you can!"</em> If you want someone who can actually ship products and get things done, not just write code, let&apos;s have a chat.
+          Hello World 👋! I&apos;m a software engineer and student researcher at Texas State University. Since starting my journey in 2020, I&apos;ve built impactful projects across web development, AI, machine learning, and data science. Skilled in TypeScript, JavaScript, Python, React, Next.js, and more, I focus on shipping products that matter. I believe in the mantra: <em>“Do what you want, not what you can!”</em>
           </p>
           <div className="flex gap-4 mt-4">
             <Link href="mailto:contact@gaurabchhetri.com.np" className={cn(buttonVariants({ variant: "default" }), "mt-4")}>emailMe <Mail className="w-4 h-4" /></Link>

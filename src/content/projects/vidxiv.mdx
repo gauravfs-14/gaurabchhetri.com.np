@@ -1,110 +1,48 @@
 ---
 name: VidXiv - ArXiv Paper to Video Generator
 author: Gaurab Chhetri
-description: Convert ArXiv research papers into engaging video presentations automatically using Python, and export in MP4 format. 
+description: VidXiv automatically converts research papers from ArXiv into engaging narrated videos with scene-by-scene breakdowns, AI-generated scripts, and export-ready MP4s for YouTube or Shorts.
 image: vidxiv.png
-languages: ["JavaScript"]
-tags: ["JavaScript", "node", "custom-programming-language", "bhanai"]
+languages: ["Python", "JavaScript"]
+tags: ["AI", "Video Generation", "Research Communication", "Streamlit"]
 type: Personal
 featured: false
 githubUrl: https://github.com/gauravfs-14/vidxiv
 ---
 
-## Features
+**VidXiv** is a tool I created to make research more accessible. Academic papers are essential for progress, but they are often dense and intimidating for people outside of research. VidXiv bridges that gap by turning **ArXiv papers into short, narrated videos**, something that can be shared on YouTube, TikTok, or Instagram Reels.  
 
-- 📄 Fetches papers directly from ArXiv using paper ID
-- 🤖 Uses AI (Gemini) to generate video scripts from paper content
-- 🎬 Creates multi-scene videos with text overlays
-- 🔊 Generates narration using text-to-speech
-- 📱 Supports both landscape (YouTube) and portrait (Shorts/Reels) formats
-- 🎵 Optional background music support
+The goal is simple: help researchers, educators, and science communicators transform complex ideas into **engaging visual stories** that reach a wider audience.
 
-## Upcoming Features
+## What It Does
 
-🚀 **Coming Soon:**
+- **Fetches papers by ArXiv ID** and parses the PDF content  
+- **Generates a video script with AI (Gemini)**, summarizing each section into digestible narration  
+- **Builds scene-by-scene videos** with text overlays, transitions, and optional background music  
+- **Narrates with TTS voices** so the videos are watchable without extra editing  
+- **Supports multiple formats** (16:9 for YouTube, 9:16 for Shorts/Reels)  
 
-- ✏️ **Script Editing Interface** - Review and modify AI-generated scripts before video creation
-- 🖼️ **Automatic Figure Integration** - Smart extraction and placement of paper figures, charts, and diagrams
-- 🎨 **Manual Graphics Upload** - Add custom images, logos, and visual elements to enhance presentations
-- 🎭 **Multiple AI Voices** - Choose from different TTS voices and speaking styles
-- 📊 **Advanced Templates** - Pre-designed video templates for different research fields
-- 🔄 **Batch Processing** - Generate videos for multiple papers simultaneously
-- 🌐 **Multi-language Support** - Generate videos in different languages
+Here’s the flow: you paste a paper ID → AI writes a script → VidXiv builds scenes → you download a ready-to-share MP4.
 
-## Installation
+## Example Workflow
 
-```bash
-uv sync
-```
+1. Enter a paper ID (e.g., `2401.06015`) into the Streamlit app  
+2. AI condenses the paper into a script with scene segments  
+3. Text overlays and narration are generated for each scene  
+4. Figures and diagrams (future feature) can be auto-extracted or manually added  
+5. Export as a polished video ready for YouTube or social platforms  
 
-## Setup
+## Why I Built It
 
-1. Copy the environment template:
+Researchers work hard to publish, but outside academia, papers rarely get read. I wanted to create a tool that makes **knowledge portable, shareable, and accessible** in the formats people already consume daily, short videos.  
 
-```bash
-cp .env.template .env
-```
+VidXiv is also a learning project for me, blending **LLM prompting, PDF parsing, text-to-speech, and video editing** into one pipeline. It is both a research communication tool and a technical challenge in AI + media generation.
 
-2. Edit `.env` and add your API keys if needed (for Gemini or other LLM models)
+## Impact
 
-## Usage
+VidXiv is a step toward making science more open and approachable. Instead of a 15-page PDF, someone can watch a 2-minute explainer. For me, it is also part of a larger vision of blending **AI, research, and storytelling** to democratize knowledge.  
 
-1. Start the Streamlit app:
+The AIT Lab at Texas State University [^1] is already using this tool to summarize the survey papers. See https://ait-lab.vercel.app/story/survey-tinyml for example.
 
-```bash
-streamlit run main.py
-```
-
-2. Open your browser to the displayed URL (usually `http://localhost:8501`)
-
-3. Enter an ArXiv paper ID (e.g., `2401.06015`)
-
-4. Choose video format:
-   - Uncheck for landscape YouTube format (16:9)
-   - Check for portrait Shorts/Reels format (9:16)
-
-5. Optionally upload background music (MP3 format)
-
-6. Click "Generate Video" and wait for processing
-
-7. Download your generated video!
-
-## Requirements
-
-- Python 3.11+
-- Internet connection (for fetching papers and AI processing)
-- Sufficient disk space for temporary video files
-
-## Dependencies
-
-- `arxiv` - Fetching papers from ArXiv
-- `pymupdf` - PDF processing and figure extraction
-- `gtts` - Text-to-speech for narration
-- `moviepy` - Video editing and composition
-- `streamlit` - Web interface
-- `langchain` - LLM integration
-- `requests` - HTTP requests
-- `pillow` - Image processing
-- `python-dotenv` - Environment variable management
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Import errors**: Make sure all dependencies are installed correctly
-2. **MoviePy errors**: Try installing with `pip install moviepy[optional]`
-3. **Font errors**: Install system fonts or use the fallback font options
-4. **Memory issues**: Try with shorter papers or reduce video quality
-
-### Error Messages
-
-- "Could not add background music": The background music file may be corrupted or in an unsupported format
-- "Error generating video": Check that all dependencies are properly installed and try again
-
-## Contributing
-
-Feel free to submit issues and enhancement requests!
-
-## License
-
-MIT License - see LICENSE file for details
+## References 
+[^1]: https://ait-lab.vercel.app

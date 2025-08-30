@@ -20,7 +20,7 @@ export default function ProfileCard() {
           <span>Gaurab Chhetri</span>
         </div>
         <div className="text-muted-foreground text-sm sm:text-base font-medium mb-1">
-          Software Engineer
+          Building things that make a difference.
         </div>
         <div className="flex items-center text-sm font-normal">
           <MapPin className="inline mr-1 w-3 sm:w-4 text-muted-foreground" />
