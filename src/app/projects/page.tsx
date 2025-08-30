@@ -1,9 +1,20 @@
 import ProjectsGrid from "@/components/projects-grid";
-import ProjectsList from "@/components/projects-list";
 import { Badge } from "@/components/ui/badge";
 import { InView } from "@/components/ui/in-view";
 import { ArrowUpRight } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Projects | Gaurab Chhetri",
+  description: "Here are some of the projects I have worked on. Feel free to explore and engage with the content. More projects available on my GitHub.",
+  openGraph: {
+    title: "Projects | Gaurab Chhetri",
+    description: "Here are some of the projects I have worked on. Feel free to explore and engage with the content. More projects available on my GitHub.",
+    images: "/project-og.png",
+  },
+};
+
 
 export default async function Page() {
   return (

@@ -32,9 +32,10 @@ export async function generateMetadata({
       images: meta.image
         ? [
             {
-              url: meta.image,
+              url: "/blogs/" + meta.image,
               width: 1200,
               height: 630,
+              alt: meta.title,
             },
           ]
         : undefined,

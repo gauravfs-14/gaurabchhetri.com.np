@@ -1,4 +1,15 @@
 import DevLogsList from "@/components/dev-logs-list"; 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Dev Logs | Gaurab Chhetri",
+  description: "Here are some of the projects I have worked on. Feel free to explore and engage with the content. More projects available on my GitHub.",
+  openGraph: {
+    title: "Dev Logs | Gaurab Chhetri",
+    description: "Here are some of the projects I have worked on. Feel free to explore and engage with the content. More projects available on my GitHub.",
+    images: "/dev-logs-og.png",
+  },
+};
 
 export default async function Page() {
   return (

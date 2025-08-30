@@ -15,9 +15,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gaurab Chhetri - Full Stack Developer and Student Researcher",
+  title: "Gaurab Chhetri - Building things that make a difference.",
   description:
-    "Gaurab Chhetri is a Full Stack Developer and Student Researcher building innovative web applications and tools, on a constant quest of learning new tech.",
+    "Gaurab Chhetri is a Software Engineer and Student Researcher building innovative web applications and tools, on a constant quest of learning new tech.",
+  keywords: ["Gaurab Chhetri", "Software Engineer", "Student Researcher", "Building things that make a difference.", "Software Engineering", "Student Researcher", "Building things that make a difference."],
+  openGraph: {
+    title: "Gaurab Chhetri - Building things that make a difference.",
+    description:
+      "Gaurab Chhetri is a Software Engineer and Student Researcher building innovative web applications and tools, on a constant quest of learning new tech.",
+    images: "/og.png",
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="light">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
