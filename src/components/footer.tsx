@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="py-4">
       <div className="container mx-auto px-4">
-        <div className="flex justify-center items-center gap-2">
+        <div className="flex justify-center items-center gap-2 flex-wrap">
             {/* GitHub, LinkedIn, Scholar, Email, ComputeNepal */}
           <Link href="https://github.com/gauravfs-14" target="_blank" className="text-primary hover:underline inline-flex items-center gap-0">
           github <ArrowUpRight className="w-4 h-4" />

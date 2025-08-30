@@ -233,6 +233,17 @@ pre > code {
   border-top-right-radius: 0;
 }
 
+.prose table {
+  overflow-x: auto;
+  display: block;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+  scrollbar-gutter: stable;
+}
+
 * {
   scroll-snap-align: start;
   scroll-padding: 150px;

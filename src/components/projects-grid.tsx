@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
 import { InView } from "./ui/in-view";
 import { getProjects } from "@/lib/getProjects";
+import { Badge } from "./ui/badge";
 
 
 export default async function ProjectsGrid({displayFeaturesOnly = false}: {displayFeaturesOnly?: boolean}) {
@@ -34,6 +35,7 @@ export default async function ProjectsGrid({displayFeaturesOnly = false}: {displ
             />
               {/* Add your project cards here */}
               <div className="w-full relative h-full bg-background rounded-lg p-1 ">
+                <Badge variant={"secondary"} className="absolute top-2 right-2 z-10">{project.meta.type}</Badge>
                 <Link
                   href={`/projects/${project.slug}`}
                 > 
@@ -66,6 +68,13 @@ export default async function ProjectsGrid({displayFeaturesOnly = false}: {displ
                     <p className="text-sm text-muted-foreground line-clamp-4">
                       {project.meta.description || "No description available."}
                     </p>
+                  </div>
+                  <div className="flex items-center gap-2 my-3 flex-wrap">
+                    {project.meta.languages.map((tag) => (
+                      <Badge key={tag} variant={"outline"}>
+                        {tag}
+                      </Badge>
+                    ))}
                   </div>
                   <div className="mt-4 flex items-center">
                     {project.meta.liveUrl && (
