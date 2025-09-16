@@ -90,7 +90,7 @@ const RESEARCH_PUBLICATIONS = [
     repositoryUrl: "https://github.com/gauravfs-14/awesome-tinyml",
   },
   {
-    title: "A Comprehensive Survey on Bio-Inspired Algorithms: Taxonomy, Applications, and Future Directions",
+    title: "A Review on Influx of Bio-Inspired Algorithms: Critique and Improvement Needs",
     authors: "Shriyank Somvanshi, Md Monzurul Islam, Syed Aaqib Javed, Gaurab Chhetri, Kazi Sifatul Islam, Tausif Islam Chowdhury, Sazzad Bin Bashar Polock, Anandi Dutta, Subasish Das",
     date: "2025/5/26",
     journal: "arXiv preprint arXiv:2506.04238",
