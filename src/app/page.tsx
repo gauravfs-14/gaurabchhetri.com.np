@@ -55,6 +55,32 @@ const EXPERIENCE = [
 
 const RESEARCH_PUBLICATIONS = [
   {
+    title: "CognitiveSky: Scalable Sentiment and Narrative Analysis for Decentralized Social Media",
+    date: "2025/9/14",
+    authors: "Gaurab Chhetri, Anandi Dutta, Subasish Das",
+    journal: "arXiv preprint arXiv:2509.11444",
+    abstract: "The emergence of decentralized social media platforms presents new opportunities and challenges for real-time analysis of public discourse. This study introduces CognitiveSky, an open-source and scalable framework designed for sentiment, emotion, and narrative analysis on Bluesky, a federated Twitter or X.com alternative. By ingesting data through Bluesky's Application Programming Interface (API), CognitiveSky applies transformer-based models to annotate large-scale user-generated content and produces structured and analyzable outputs. These summaries drive a dynamic dashboard that visualizes evolving patterns in emotion, activity, and conversation topics. Built entirely on free-tier infrastructure, CognitiveSky achieves both low operational cost and high accessibility. While demonstrated here for monitoring mental health discourse, its modular design enables applications across domains such as disinformation detection, crisis response, and civic sentiment analysis. By bridging large language models with decentralized networks, CognitiveSky offers a transparent, extensible tool for computational social science in an era of shifting digital ecosystems.",
+    paperUrl: "https://arxiv.org/abs/2509.11444",
+    repositoryUrl: "https://github.com/gauravfs-14/CognitiveSky",
+  },
+  {
+    title: "A Transformer-Based Cross-Platform Analysis of Public Discourse on the 15-Minute City Paradigm",
+    date: "2025/9/14",
+    authors: "Gaurab Chhetri, Darrell Anderson, Boniphace Kutela, Subasish Das",
+    journal: "arXiv preprint arXiv:2509.11443",
+    abstract: "This study presents the first multi-platform sentiment analysis of public opinion on the 15-minute city concept across Twitter, Reddit, and news media. Using compressed transformer models and Llama-3-8B for annotation, we classify sentiment across heterogeneous text domains. Our pipeline handles long-form and short-form text, supports consistent annotation, and enables reproducible evaluation. We benchmark five models (DistilRoBERTa, DistilBERT, MiniLM, ELECTRA, TinyBERT) using stratified 5-fold cross-validation, reporting F1-score, AUC, and training time. DistilRoBERTa achieved the highest F1 (0.8292), TinyBERT the best efficiency, and MiniLM the best cross-platform consistency. Results show News data yields inflated performance due to class imbalance, Reddit suffers from summarization loss, and Twitter offers moderate challenge. Compressed models perform competitively, challenging assumptions that larger models are necessary. We identify platform-specific trade-offs and propose directions for scalable, real-world sentiment classification in urban planning discourse.",
+    paperUrl: "https://arxiv.org/abs/2509.11443",
+    repositoryUrl: "https://github.com/gauravfs-14/15min-city-bench",
+  },
+  {
+    title: "Tabular Data with Class Imbalance: Predicting Electric Vehicle Crash Severity with Pretrained Transformers (TabPFN) and Mamba-Based Models",
+    date: "2025/9/14",
+    authors: "Shriyank Somvanshi, Pavan Hebli, Gaurab Chhetri, Subasish Das",
+    journal: "arXiv preprint arXiv:2509.11449",
+    abstract: "This study presents a deep tabular learning framework for predicting crash severity in electric vehicle (EV) collisions using real-world crash data from Texas (2017-2023). After filtering for electric-only vehicles, 23,301 EV-involved crash records were analyzed. Feature importance techniques using XGBoost and Random Forest identified intersection relation, first harmful event, person age, crash speed limit, and day of week as the top predictors, along with advanced safety features like automatic emergency braking. To address class imbalance, Synthetic Minority Over-sampling Technique and Edited Nearest Neighbors (SMOTEENN) resampling was applied. Three state-of-the-art deep tabular models, TabPFN, MambaNet, and MambaAttention, were benchmarked for severity prediction. While TabPFN demonstrated strong generalization, MambaAttention achieved superior performance in classifying severe injury cases due to its attention-based feature reweighting. The findings highlight the potential of deep tabular architectures for improving crash severity prediction and enabling data-driven safety interventions in EV crash contexts.",
+    paperUrl: "https://arxiv.org/abs/2509.11449",
+  },
+  {
     title: "Model Context Protocols in Adaptive Transport Systems: A Survey",
     date: "2025/8/26",
     authors: "Gaurab Chhetri, Shriyank Somvanshi, Md Monzurul Islam, Shamyo Brotee, Mahmuda Sultana Mimi, Dipti Koirala, Biplov Pandey, Subasish Das",
