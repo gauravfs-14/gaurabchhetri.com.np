@@ -1,36 +1,156 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gaurab Chhetri - Portfolio Website
 
-## Getting Started
+<div align="center">
+  <img src="https://img.shields.io/badge/Next.js-15.3.3-black?style=for-the-badge&logo=next.js" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react" alt="React" />
+</div>
 
-First, run the development server:
+<div align="center">
+  <h3>🚀 Building things that make a difference</h3>
+  <p>Personal portfolio showcasing my journey as a Software Engineer and Student Researcher</p>
+</div>
+
+---
+
+## 🌟 About
+
+Welcome to my personal portfolio! I'm Gaurab Chhetri, a Software Engineer and Student Researcher at Texas State University. Since starting my journey in 2020, I've built impactful projects across web development, AI, machine learning, and data science.
+
+**My Mantra:** *"Do what you want, not what you can!"*
+
+## ✨ Features
+
+- **🎨 Modern Design**: Clean, responsive design with smooth animations
+- **🌙 Dark/Light Mode**: Toggle between themes with system preference detection
+- **📱 Mobile Responsive**: Optimized for all device sizes with mobile drawer navigation
+- **⚡ Performance**: Built with Next.js 15 for optimal performance and SEO
+- **📝 MDX Blog**: Write blog posts using MDX with syntax highlighting
+- **🎯 Project Showcase**: Interactive project grid with detailed case studies
+- **🔍 SEO Optimized**: Open Graph images, meta tags, and structured data
+- **♿ Accessible**: WCAG compliant with proper ARIA labels and keyboard navigation
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript 5.0
+- **Styling**: Tailwind CSS 4.0
+- **UI Components**: Radix UI primitives
+- **Icons**: Lucide React, React Icons
+- **Animations**: Framer Motion
+- **Fonts**: Geist Sans & Geist Mono
+
+### Content & Development
+
+- **Content**: MDX with frontmatter
+- **Code Highlighting**: Shiki with custom themes
+- **Math Support**: KaTeX for mathematical expressions
+- **Package Manager**: Yarn
+- **Linting**: ESLint with Next.js config
+
+### Deployment & Performance
+
+- **Hosting**: Vercel
+- **Analytics**: Built-in Next.js analytics
+- **Performance**: Core Web Vitals optimized
+
+## 🚀 Getting Started
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/gauravfs-14/gaurabchhetri.com.np.git
+   cd gaurabchhetri.com.np
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   yarn
+   ```
+
+3. **Run the development server**
+
+   ```bash
+   yarn dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Building for Production
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn build
+yarn start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+src/
+├── app/                    # Next.js App Router
+│   ├── blogs/             # Blog pages and layouts
+│   ├── projects/          # Project pages and layouts
+│   ├── devLogs/           # Development logs
+│   ├── globals.css        # Global styles
+│   └── layout.tsx         # Root layout
+├── components/            # React components
+│   ├── ui/               # Reusable UI components
+│   ├── nav-bar.tsx       # Navigation with mobile drawer
+│   ├── profile-card.tsx  # Hero section
+│   ├── projects-grid.tsx # Project showcase
+│   └── skills-grid.tsx   # Skills display
+├── content/              # MDX content
+│   ├── blogs/           # Blog posts
+│   └── projects/        # Project case studies
+├── lib/                 # Utility functions
+└── hooks/               # Custom React hooks
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📝 Content Management
 
-## Learn More
+### Adding Blog Posts
 
-To learn more about Next.js, take a look at the following resources:
+1. Create a new `.mdx` file in `src/content/blogs/`
+2. Add frontmatter:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```yaml
+   ---
+   title: "Your Blog Post Title"
+   description: "Brief description"
+   date: "2024-01-01"
+   tags: ["tag1", "tag2"]
+   ---
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Write your content using MDX syntax
 
-## Deploy on Vercel
+### Adding Projects
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Create a new `.mdx` file in `src/content/projects/`
+2. Add frontmatter:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```yaml
+   ---
+   title: "Project Name"
+   description: "Project description"
+   image: "/path/to/image.jpg"
+   technologies: ["React", "TypeScript"]
+   github: "https://github.com/username/repo"
+   live: "https://project-url.com"
+   ---
+   ```
+
+## 🔗 Links
+
+- **Portfolio**: [gaurabchhetri.com.np](https://gaurabchhetri.com.np)
+- **Resume**: [resume.gaurabchhetri.com.np](https://resume.gaurabchhetri.com.np)
+- **GitHub**: [@gauravfs-14](https://github.com/gauravfs-14)
+- **LinkedIn**: [Gaurab Chhetri](https://www.linkedin.com/in/gaurabchhetri/)
+- **Google Scholar**: [Gaurab Chhetri](https://scholar.google.com/citations?user=NRzdAVEAAAAJ&hl=en)
