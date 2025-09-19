@@ -7,6 +7,7 @@ import { InView } from "./ui/in-view";
 import { SiGooglescholar } from "react-icons/si";
 import { useState } from "react";
 import { ModeToggle } from "./mode-toggle";
+import { CommandBox } from "./command-box";
 
 export default function NavBar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -53,6 +54,18 @@ export default function NavBar() {
             </div>
           </InView>
           <ul className="flex space-x-2 sm:space-x-4 items-center">
+          <InView
+              variants={{
+                hidden: { opacity: 0, y: -20, filter: "blur(5px)" },
+                visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+              }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewOptions={{ margin: "0px 0px -200px 0px" }}
+            >
+              <li className="hidden sm:block">
+                <CommandBox />
+              </li>
+            </InView>
             <InView
               variants={{
                 hidden: { opacity: 0, y: -20, filter: "blur(5px)" },
