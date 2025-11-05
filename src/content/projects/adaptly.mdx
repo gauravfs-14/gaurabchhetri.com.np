@@ -1,0 +1,62 @@
+---
+name: Adaptly - The AI-Adaptive UI Library for React & Next.js
+author: Gaurab Chhetri
+description: Adaptly brings intelligence to modern web dashboards. It's a TypeScript-first library that lets your UI understand what users mean, not just what they click.
+image: adaptly.png
+languages: ["TypeScript", "JavaScript"]
+tags: ["AI", "React", "Next.js", "TypeScript", "UI Library", "Hackathon"]
+type: Hackathon
+featured: true
+githubUrl: https://github.com/gauravfs-14/adaptly
+liveUrl: https://gauravfs-14.github.io/adaptly/
+---
+
+**Adaptly** is an AI-adaptive UI library for React and Next.js that brings intelligence to modern web dashboards. Built during HackTX 2025 at The University of Texas at Austin, it's a TypeScript-first library that lets your UI understand what users mean, not just what they click.
+
+Most "AI UI" tools stop at code generation. Adaptly doesn't generate code — it uses your code intelligently. The library dynamically mounts, unmounts, and arranges your existing React components to create context-aware interfaces in real time.
+
+## What It Does
+
+- **Adaptive Runtime Layer**: Acts as an intelligent runtime that reasons about structure, hierarchy, and intent
+- **Natural Language Interface**: Users press `Cmd + K` and describe what they want in plain English
+- **Component Intelligence**: Dynamically arranges your existing React components based on user intent
+- **Multi-LLM Support**: Works with OpenAI GPT, Anthropic Claude, and Google Gemini models
+- **Persistent Storage**: UI state is automatically saved and restored across sessions
+- **TypeScript-First**: Full type safety and IntelliSense support throughout
+
+Instead of navigating menus or switching dashboards, users just tell the interface what they want — and the LLM rewrites the layout in real time using your existing components.
+
+## Technical Stack
+
+Built with **Next.js 15**, **React 19+**, **TypeScript 5.9+**, **Tailwind CSS**, and **shadcn/ui**. Adaptly uses AI SDK integrations for multiple LLM providers and includes a component registry system (`adaptly.json`) that lets the AI understand your component capabilities.
+
+## Why We Built It
+
+Adaptly was born from a hackathon weekend at UT Austin. We wanted to create something that goes beyond code generation — a tool that makes existing UIs truly adaptive and intent-driven. The goal was to build an AI that lives inside your app's design system, not as a chat overlay.
+
+Most dashboard builders require users to click through multiple menus. Adaptly turns that into a conversation: "Show me sales and analytics" → the UI adapts instantly.
+
+## Impact
+
+Built in 48 hours during HackTX 2025[^1], Adaptly is now open source and available on npm. It represents our vision for AI-assisted front-end development, where design intent and runtime reasoning work together seamlessly.
+
+The library is production-ready and can be integrated into any React or Next.js application with a single command:
+
+```bash
+npm install adaptly
+```
+
+## Team
+
+Built with an amazing team at HackTX 2025 (organized by Freetail Hackers at UT Austin):
+
+- **Amul Poudel**[^2]
+- **Rastrabhushan Dahal (Hritik)**[^3]
+- **Samar Ranjit**[^4]
+
+## References
+
+[^1]: https://hacktx.com/
+[^2]: https://www.amulpoudel.com.np/
+[^3]: https://www.linkedin.com/in/rastrabhushan-dahal-453b82380/
+[^4]: https://samarranjit.com.np/
