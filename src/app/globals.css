@@ -180,6 +180,7 @@
   --shadow-2xl: 0px 4px 10px 0px hsl(240 30% 25% / 0.30);
 }
 
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
