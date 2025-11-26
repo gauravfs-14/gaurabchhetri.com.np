@@ -8,6 +8,16 @@ import { cn } from "@/lib/utils";
 import { ArrowRight, ArrowUpRight, Calendar, Mail } from "lucide-react";
 import Link from "next/link";
 
+interface ResearchPublication {
+  title: string;
+  date: string;
+  authors: string;
+  journal: string;
+  abstract: string;
+  paperUrl: string;
+  repositoryUrl?: string;
+}
+
 const EDUCATION = [
   {
     title: "Bachelor of Science in Computer Science",
@@ -53,7 +63,7 @@ const EXPERIENCE = [
   },
 ];
 
-const RESEARCH_PUBLICATIONS = [
+const RESEARCH_PUBLICATIONS: ResearchPublication[] = [
   {
     title:
       "CognitiveSky: Scalable Sentiment and Narrative Analysis for Decentralized Social Media",
@@ -141,7 +151,6 @@ const RESEARCH_PUBLICATIONS = [
       "Bio-inspired algorithms (BIAs) utilize natural processes such as evolution, swarm behavior, foraging, and plant growth to solve complex, nonlinear, high-dimensional optimization problems. This survey categorizes BIAs into eight groups: evolutionary, swarm intelligence, physics-inspired, ecosystem and plant-based, predator-prey, neural-inspired, human-inspired, and hybrid approaches, and reviews their core principles, strengths, and limitations. We illustrate the usage of these algorithms in machine learning, engineering design, bioinformatics, and intelligent systems, and highlight recent advances in hybridization, parameter tuning, and adaptive strategies. Finally, we identify open challenges such as scalability, convergence, reliability, and interpretability to suggest directions for future research. This work aims to serve as a foundational resource for both researchers and practitioners interested in understanding the current landscape and future directions of bio-inspired computing.",
     paperUrl: "https://arxiv.org/abs/2506.04238",
   },
-  {},
 ];
 
 export default function Home() {
