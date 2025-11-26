@@ -155,7 +155,7 @@ const RESEARCH_PUBLICATIONS: ResearchPublication[] = [
 
 export default function Home() {
   return (
-    <main className="container mx-auto px-8 pb-10 max-w-3xl">
+    <main className="container mx-auto px-8 pb-10 max-w-3xl" aria-hidden="true">
       <InView
         variants={{
           hidden: { opacity: 0, y: 20, filter: "blur(5px)" },

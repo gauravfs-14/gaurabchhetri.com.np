@@ -64,7 +64,10 @@ export default async function Page({
 
   return (
     <>
-      <div className="container max-w-3xl mx-auto px-4 pb-10">
+      <div
+        className="container max-w-3xl mx-auto px-4 pb-10"
+        aria-hidden="true"
+      >
         <p className="text-sm text-gray-500 mb-4">
           By{" "}
           <span className="font-medium">{meta.author ?? "Gaurab Chhetri"}</span>{" "}

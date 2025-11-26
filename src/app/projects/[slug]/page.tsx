@@ -64,7 +64,10 @@ export default async function Page({
 
   return (
     <>
-      <div className="container max-w-3xl mx-auto px-4 pb-10">
+      <div
+        className="container max-w-3xl mx-auto px-4 pb-10"
+        aria-hidden="true"
+      >
         <p className="text-sm text-muted-foreground mb-4">
           By{" "}
           <span className="font-medium">{meta.author ?? "Gaurab Chhetri"}</span>
@@ -80,30 +83,55 @@ export default async function Page({
           {meta.description}
         </p>
         <div className="flex justify-start gap-2 mb-8 mt-8">
-        {meta.liveUrl && (
-          <div className="flex justify-center">
-            <a href={meta.liveUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant={"default"} size={"sm"} className="cursor-pointer">viewLive <Eye className="w-4 h-4" /></Button>
+          {meta.liveUrl && (
+            <div className="flex justify-center">
+              <a href={meta.liveUrl} target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant={"default"}
+                  size={"sm"}
+                  className="cursor-pointer"
+                >
+                  viewLive <Eye className="w-4 h-4" />
+                </Button>
               </a>
             </div>
           )}
-        {meta.githubUrl && (
-          <div className="flex justify-center">
-            <a href={meta.githubUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant={meta.liveUrl ? "ghost" : "default"} size={"sm"} className="cursor-pointer">viewCode <Github className="w-4 h-4" /></Button>
-            </a>
-          </div>
-        )}
-        {meta.paperUrl && (
-          <div className="flex justify-center">
-            <a href={meta.paperUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant={meta.liveUrl || meta.githubUrl ? "ghost" : "default"} size={"sm"} className="cursor-pointer">readPaper <ArrowUpRight className="w-4 h-4" /></Button>
-            </a>
-          </div>
-        )}
+          {meta.githubUrl && (
+            <div className="flex justify-center">
+              <a
+                href={meta.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant={meta.liveUrl ? "ghost" : "default"}
+                  size={"sm"}
+                  className="cursor-pointer"
+                >
+                  viewCode <Github className="w-4 h-4" />
+                </Button>
+              </a>
+            </div>
+          )}
+          {meta.paperUrl && (
+            <div className="flex justify-center">
+              <a href={meta.paperUrl} target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant={meta.liveUrl || meta.githubUrl ? "ghost" : "default"}
+                  size={"sm"}
+                  className="cursor-pointer"
+                >
+                  readPaper <ArrowUpRight className="w-4 h-4" />
+                </Button>
+              </a>
+            </div>
+          )}
         </div>
         {meta.image && (
-          <div className="relative w-full mx-auto aspect-video mb-18" id="featured-image">
+          <div
+            className="relative w-full mx-auto aspect-video mb-18"
+            id="featured-image"
+          >
             <Image
               src={`/projects/${meta.image}`}
               alt={meta.name}
