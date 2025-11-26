@@ -1,0 +1,73 @@
+---
+title: "Why I Prefer Free Tier Infrastructure and What It Teaches You"
+description: "Sharing how using free tier infrastructure taught me to optimize software and systems for highest possible efficiency."
+date: "2025-11-26"
+tags:
+  - do what you want not what you can
+  - coding motivation
+  - software engineering mindset
+  - purpose driven projects
+  - hackathon lessons
+  - developer portfolio blog
+  - meaningful coding projects
+  - student researcher journey
+  - Gaurab Chhetri blog
+  - AI hackathon projects
+image: "why-i-prefer-free-tier.png"
+---
+
+TL;DR - If you know how to write a program that works efficiently without breaking in free-tier infrastructure, then you can just slay when given over-powered compute.
+
+Continue reading if you have some time.
+
+## Story Time
+
+I started my coding journey back in Nepal[^1], and at the time there was no way for general public to make digital purchase. mostly because most people did not have easy access to Visa or MasterCard. Now there is something called a Dollar Card that lets people make international payments which can let Nepali population to make purchases online[^2]. However, there were workarounds to make some purchases, popular one being calling some relatives in US, Australia, UK, etc. but that was rarely practical. Beyond that, when you are just starting to learn, spending money on API credits or cloud compute feels more like a barrier than an investment.
+
+Now, I moved to the US, and I have the access to everything that I thought pushed me back in tech. I now have multiple credit cards (if you want $100, [click here](https://refer.discover.com/s/thapagaurav7215?advocate.partner_share_id=7035336149)), but I still prefer free tier. Not because I avoid spending, but because free tier forces me to design systems that are solid, robust, maintainable.
+
+## Building around constraints
+
+From my experience, when you work inside real constraints, you are much less likely to design a bad system. You are forced to design systems that are designed for efficiency and sustainability. Every design decision matters. However, if you were given unlimited compute, you could design a terrible system, that works, but would that be the way to go? Absolutely not.
+
+If a pipeline performs unnecessary recomputation, your VM will choke. If your dashboards load too much data at once, your page will stall. If your workflow has too many external calls, your rate limits will block your entire system. Constraints shape your design choices in ways that paid infrastructure rarely does.
+
+I will take the example of CognitiveSky[^3]. It runs entirely on free tier infrastructure, yet it is efficient and runs 24x7 pipelines.
+
+## What I learned from free tier engineering
+
+When you build systems around free-tier infrastructure, you become a better developer overall. Here's how.
+
+- **Efficiency becomes a mindset.**
+  When you cannot scale by throwing more hardware at a problem, you look for structural improvements. You batch API calls. You cache metadata. You deduplicate snapshots. You choose libraries by memory footprint rather than popularity. These habits transfer to every project.
+
+- **Observability matters even for small systems.**
+  When a VM has two virtual CPUs and a tiny memory budget, you notice problems quickly. Log spam, slow queries, and unnecessary retries become teaching moments. You learn to monitor resource usage and interpret simple patterns before they turn into failures.
+
+- **Good system design beats raw compute.**
+  CognitiveSky[^3] handles thousands of posts, runs sentiment modeling, performs topic extraction, and produces daily snapshots. The reason it works is not because of the hardware. It is because the architecture minimizes waste. Most systems fail to scale because they push everything through a single script. Free tier limits push you toward a modular mindset.
+
+- **Free services encourage experimentation.**
+  Using Oracle Cloud Free VM[^4], Supabase[^5], Turso[^6], and Vercel[^7] removes cost barriers but adds architectural constraints. This encourages you to explore alternatives that more expensive systems hide. For example, SQLite and Turso replaced what would normally be a full managed database. GitHub Actions replaced scheduled servers. Designing with these tools makes you creative.
+
+## Why this mindset is valuable
+
+Free tier engineering forces you to internalize a simple idea: build what you need, not what you can. Large systems are often overbuilt because developers assume they will scale later. Free tier constraints force you to consider longevity from day one. You learn to write code that survives low memory environments, passes reproducibility checks, and avoids silent failures.
+
+This mindset carries into real research and production work. Whether you are training models, designing dashboards, or building pipelines, you begin to think in terms of clarity, safety, and maintainability. You trade shiny complexity for structural correctness.
+
+## Takeaway
+
+The free tier is not just a budget tool. It is a training ground. It tests your engineering intuition in a way unlimited compute never will. If you can design reliable, scalable, and interpretable systems on zero dollar infrastructure, you can do it anywhere.
+
+If you are building anything, I encourage you to try building something on a free tier stack. The constraints will guide you toward good habits that stay with you long after the project ends. If you build this way, you can scale the system as much as you need later.
+
+## References
+
+[^1]: https://en.wikipedia.org/wiki/Nepal
+[^2]: https://qualitycomputer.com.np/blog/latest-tech-blogs-in-nepal-1/international-payment-in-nepal-problems-and-solutions-158
+[^3]: https://www.gaurabchhetri.com.np/projects/cognitivesky
+[^4]: https://www.oracle.com/cloud/free/
+[^5]: https://supabase.com/pricing
+[^6]: https://turso.tech/pricing
+[^7]: https://vercel.com/pricing

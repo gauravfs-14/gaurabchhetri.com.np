@@ -22,16 +22,21 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="flex items-center justify-between px-4 sm:px-6 pb-16 sm:pb-20 pt-6 sm:pt-8 container mx-auto max-w-4xl sticky top-0 z-50">
+      <nav
+        className="flex items-center justify-between px-4 sm:px-6 pb-16 sm:pb-20 pt-6 sm:pt-8 container mx-auto max-w-4xl sticky top-0 z-50"
+        aria-hidden="true"
+      >
         {/* Background with backdrop blur and mask for smooth fade */}
-        <div 
+        <div
           className="absolute inset-0 bg-background/80 backdrop-blur-lg"
           style={{
-            maskImage: 'linear-gradient(to bottom, black 0%, black 40%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.4) 80%, transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 40%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.4) 80%, transparent 100%)'
+            maskImage:
+              "linear-gradient(to bottom, black 0%, black 40%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.4) 80%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to bottom, black 0%, black 40%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0.4) 80%, transparent 100%)",
           }}
         />
-        
+
         {/* Content positioned above the background */}
         <div className="relative z-10 flex items-center justify-between w-full">
           <InView
@@ -44,17 +49,13 @@ export default function NavBar() {
           >
             <div className="text-base sm:text-lg font-bold">
               <Link href="/" className="">
-                <span className="md:hidden">
-                  {"<G />"}
-                </span>
-                <span className="hidden md:block">
-                  {"<Gaurab />"}
-                </span>
+                <span className="md:hidden">{"<G />"}</span>
+                <span className="hidden md:block">{"<Gaurab />"}</span>
               </Link>
             </div>
           </InView>
           <ul className="flex space-x-2 sm:space-x-4 items-center">
-          <InView
+            <InView
               variants={{
                 hidden: { opacity: 0, y: -20, filter: "blur(5px)" },
                 visible: { opacity: 1, y: 0, filter: "blur(0px)" },
@@ -139,7 +140,9 @@ export default function NavBar() {
               <li className="-mx-1 sm:-mx-2">
                 <Link
                   href="https://github.com/gauravfs-14"
-                  className={cn(buttonVariants({ variant: "ghost", size: "sm" }))}
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "sm" })
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -158,7 +161,9 @@ export default function NavBar() {
               <li className="-mx-1 sm:-mx-2">
                 <Link
                   href="https://www.linkedin.com/in/gaurabchhetri/"
-                  className={cn(buttonVariants({ variant: "ghost", size: "sm" }))}
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "sm" })
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -177,7 +182,9 @@ export default function NavBar() {
               <li className="-mx-1 sm:-mx-2">
                 <Link
                   href="https://scholar.google.com/citations?user=NRzdAVEAAAAJ&hl=en"
-                  className={cn(buttonVariants({ variant: "ghost", size: "sm" }))}
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "sm" })
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -196,7 +203,9 @@ export default function NavBar() {
               <li className="-mx-1 sm:-mx-2">
                 <Link
                   href="mailto:contact@gaurabchhetri.com.np"
-                  className={cn(buttonVariants({ variant: "ghost", size: "sm" }))}
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "sm" })
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -228,7 +237,9 @@ export default function NavBar() {
               <li className="sm:hidden -mx-1">
                 <button
                   onClick={toggleDrawer}
-                  className={cn(buttonVariants({ variant: "ghost", size: "sm" }))}
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "sm" })
+                  )}
                   aria-label="Toggle navigation menu"
                 >
                   <Menu className="w-4 h-4" />
@@ -240,21 +251,25 @@ export default function NavBar() {
       </nav>
 
       {/* Mobile Drawer Navigation */}
-      <div className={cn(
-        "fixed inset-0 z-50 sm:hidden",
-        isDrawerOpen ? "block" : "hidden"
-      )}>
+      <div
+        className={cn(
+          "fixed inset-0 z-50 sm:hidden",
+          isDrawerOpen ? "block" : "hidden"
+        )}
+      >
         {/* Backdrop */}
-        <div 
+        <div
           className="absolute inset-0 bg-black/50 backdrop-blur-sm"
           onClick={closeDrawer}
         />
-        
+
         {/* Drawer */}
-        <div className={cn(
-          "absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-background/95 backdrop-blur-xl border-l border-border/20 shadow-2xl transform transition-transform duration-300 ease-in-out",
-          isDrawerOpen ? "translate-x-0" : "translate-x-full"
-        )}>
+        <div
+          className={cn(
+            "absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-background/95 backdrop-blur-xl border-l border-border/20 shadow-2xl transform transition-transform duration-300 ease-in-out",
+            isDrawerOpen ? "translate-x-0" : "translate-x-full"
+          )}
+        >
           {/* Drawer Header */}
           <div className="flex items-center justify-between p-6 border-b border-border/20">
             <h2 className="text-lg font-semibold">{"<Gaurab />"}</h2>
@@ -266,7 +281,7 @@ export default function NavBar() {
               <X className="w-4 h-4" />
             </button>
           </div>
-          
+
           {/* Drawer Content */}
           <div className="p-6 space-y-6">
             <div className="space-y-4">
@@ -308,7 +323,7 @@ export default function NavBar() {
                 </Link>
               </nav>
             </div>
-            
+
             <div className="space-y-4">
               <h3 className="text-sm font-medium text-muted-foreground">
                 connect
