@@ -2,15 +2,16 @@
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, Github, Linkedin, Mail, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import { InView } from "./ui/in-view";
-import { SiGooglescholar } from "react-icons/si";
 import { useState } from "react";
 import { ModeToggle } from "./mode-toggle";
 import { CommandBox } from "./command-box";
+import { PersonalLinks } from "@/content/links";
 
 export default function NavBar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const renderLinks = ["GitHub", "LinkedIn", "Scholar", "Email"];
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -129,90 +130,32 @@ export default function NavBar() {
                 </Link>
               </li>
             </InView>
-            <InView
-              variants={{
-                hidden: { opacity: 0, y: -20, filter: "blur(5px)" },
-                visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-              }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewOptions={{ margin: "0px 0px -200px 0px" }}
-            >
-              <li className="-mx-1 sm:-mx-2">
-                <Link
-                  href="https://github.com/gauravfs-14"
-                  className={cn(
-                    buttonVariants({ variant: "ghost", size: "sm" })
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Github className="inline ml w-4 h-4" />
-                </Link>
-              </li>
-            </InView>
-            <InView
-              variants={{
-                hidden: { opacity: 0, y: -20, filter: "blur(5px)" },
-                visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-              }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewOptions={{ margin: "0px 0px -200px 0px" }}
-            >
-              <li className="-mx-1 sm:-mx-2">
-                <Link
-                  href="https://www.linkedin.com/in/gaurabchhetri/"
-                  className={cn(
-                    buttonVariants({ variant: "ghost", size: "sm" })
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Linkedin className="inline ml w-4 h-4" />
-                </Link>
-              </li>
-            </InView>
-            <InView
-              variants={{
-                hidden: { opacity: 0, y: -20, filter: "blur(5px)" },
-                visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-              }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewOptions={{ margin: "0px 0px -200px 0px" }}
-            >
-              <li className="-mx-1 sm:-mx-2">
-                <Link
-                  href="https://scholar.google.com/citations?user=NRzdAVEAAAAJ&hl=en"
-                  className={cn(
-                    buttonVariants({ variant: "ghost", size: "sm" })
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SiGooglescholar className="inline ml w-4 h-4" />
-                </Link>
-              </li>
-            </InView>
-            <InView
-              variants={{
-                hidden: { opacity: 0, y: -20, filter: "blur(5px)" },
-                visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-              }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewOptions={{ margin: "0px 0px -200px 0px" }}
-            >
-              <li className="-mx-1 sm:-mx-2">
-                <Link
-                  href="mailto:contact@gaurabchhetri.com.np"
-                  className={cn(
-                    buttonVariants({ variant: "ghost", size: "sm" })
-                  )}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Mail className="inline ml w-4 h-4" />
-                </Link>
-              </li>
-            </InView>
+            {PersonalLinks.filter((link) =>
+              renderLinks.includes(link.label)
+            ).map((link) => (
+              <InView
+                key={link.label}
+                variants={{
+                  hidden: { opacity: 0, y: -20, filter: "blur(5px)" },
+                  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+                }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewOptions={{ margin: "0px 0px -200px 0px" }}
+              >
+                <li className="-mx-1 sm:-mx-2">
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      buttonVariants({ variant: "ghost", size: "sm" })
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <link.icon className="inline ml w-4 h-4" />
+                  </Link>
+                </li>
+              </InView>
+            ))}
             <InView
               variants={{
                 hidden: { opacity: 0, y: -20, filter: "blur(5px)" },
@@ -329,58 +272,23 @@ export default function NavBar() {
                 connect
               </h3>
               <div className="grid grid-cols-2 gap-3">
-                <Link
-                  href="https://github.com/gauravfs-14"
-                  onClick={closeDrawer}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={cn(
-                    buttonVariants({ variant: "outline" }),
-                    "w-full justify-start"
-                  )}
-                >
-                  <Github className="mr-2 w-4 h-4" />
-                  github
-                </Link>
-                <Link
-                  href="https://www.linkedin.com/in/gaurabchhetri/"
-                  onClick={closeDrawer}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={cn(
-                    buttonVariants({ variant: "outline" }),
-                    "w-full justify-start"
-                  )}
-                >
-                  <Linkedin className="mr-2 w-4 h-4" />
-                  linkedin
-                </Link>
-                <Link
-                  href="https://scholar.google.com/citations?user=NRzdAVEAAAAJ&hl=en"
-                  onClick={closeDrawer}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={cn(
-                    buttonVariants({ variant: "outline" }),
-                    "w-full justify-start"
-                  )}
-                >
-                  <SiGooglescholar className="mr-2 w-4 h-4" />
-                  scholar
-                </Link>
-                <Link
-                  href="mailto:contact@gaurabchhetri.com.np"
-                  onClick={closeDrawer}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={cn(
-                    buttonVariants({ variant: "outline" }),
-                    "w-full justify-start"
-                  )}
-                >
-                  <Mail className="mr-2 w-4 h-4" />
-                  email
-                </Link>
+                {PersonalLinks.filter((link) =>
+                  renderLinks.includes(link.label)
+                ).map((link) => (
+                  <Link
+                    href={link.href}
+                    onClick={closeDrawer}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                      buttonVariants({ variant: "outline" }),
+                      "w-full justify-start"
+                    )}
+                  >
+                    <link.icon className="mr-2 w-4 h-4" />
+                    {link.label}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

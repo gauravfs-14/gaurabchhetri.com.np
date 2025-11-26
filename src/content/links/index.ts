@@ -42,7 +42,7 @@ export const PersonalLinks: LinkCard[] = [
   {
     icon: SiGooglescholar,
     href: "https://scholar.google.com/citations?user=NRzdAVEAAAAJ&hl=en",
-    label: "Google Scholar",
+    label: "Scholar",
     description: "Gaurab Chhetri",
     type: "external",
   },
