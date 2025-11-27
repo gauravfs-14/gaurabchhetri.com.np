@@ -1,56 +1,40 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { PersonalLinks } from "@/content/links";
+import { ComputeNepalLinks } from "@/content/links";
+import { Fragment } from "react";
 
 export default function Footer() {
+  const renderLinks = ["GitHub", "LinkedIn", "Scholar", "Email"];
   return (
     <footer className="py-6 border-t border-border/50" aria-hidden="true">
       <div className="container mx-auto px-4">
         <div className="flex justify-center items-center gap-3 flex-wrap text-sm">
           {/* GitHub, LinkedIn, Scholar, Email, ComputeNepal */}
-          <Link
-            href="https://github.com/gauravfs-14"
-            target="_blank"
-            className="text-primary hover:underline inline-flex items-center gap-1"
-            aria-label="GitHub"
-          >
-            github <ArrowUpRight className="w-4 h-4" />
-          </Link>
-          <span className="text-muted-foreground">·</span>
-          <Link
-            href="https://www.linkedin.com/in/gaurabchhetri/"
-            target="_blank"
-            className="text-primary hover:underline inline-flex items-center gap-1"
-            aria-label="LinkedIn"
-          >
-            linkedin <ArrowUpRight className="w-4 h-4" />
-          </Link>
-          <span className="text-muted-foreground">·</span>
-          <Link
-            href="https://scholar.google.com/citations?user=0123456789&hl=en"
-            target="_blank"
-            className="text-primary hover:underline inline-flex items-center gap-1"
-            aria-label="Google Scholar"
-          >
-            scholar <ArrowUpRight className="w-4 h-4" />
-          </Link>
-          <span className="text-muted-foreground">·</span>
-          <Link
-            href="https://computenepal.com"
-            target="_blank"
-            className="text-primary hover:underline inline-flex items-center gap-1"
-            aria-label="ComputeNepal"
-          >
-            computenepal <ArrowUpRight className="w-4 h-4" />
-          </Link>
-          <span className="text-muted-foreground">·</span>
-          <Link
-            href="mailto:contact@gaurabchhetri.com.np"
-            target="_blank"
-            className="text-primary hover:underline inline-flex items-center gap-1"
-            aria-label="Email"
-          >
-            email <ArrowUpRight className="w-4 h-4" />
-          </Link>
+          {PersonalLinks.filter((link) => renderLinks.includes(link.label))
+            .concat(
+              ComputeNepalLinks.filter((link) =>
+                ["ComputeNepal"].includes(link.label)
+              )
+            )
+            .map((link, idx) => (
+              <Fragment key={link.label}>
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  className="text-primary hover:underline inline-flex items-center gap-1"
+                  aria-label={link.label}
+                >
+                  {link.label.toLowerCase()}{" "}
+                  <ArrowUpRight className="w-4 h-4" />
+                </Link>
+                {idx <
+                  PersonalLinks.filter((link) =>
+                    renderLinks.includes(link.label)
+                  ).length && <span className="text-muted-foreground">·</span>}
+              </Fragment>
+            ))}
         </div>
         <p className="text-center text-xs sm:text-sm text-muted-foreground mt-3">
           &copy; {new Date().getFullYear()}{" "}
