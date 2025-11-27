@@ -21,7 +21,15 @@ export const metadata: Metadata = {
   title: "Gaurab Chhetri - Building things that make a difference.",
   description:
     "Gaurab Chhetri is a Software Engineer and Student Researcher building innovative web applications and tools, on a constant quest of learning new tech.",
-  keywords: ["Gaurab Chhetri", "Software Engineer", "Student Researcher", "Building things that make a difference.", "Software Engineering", "Student Researcher", "Building things that make a difference."],
+  keywords: [
+    "Gaurab Chhetri",
+    "Software Engineer",
+    "Student Researcher",
+    "Building things that make a difference.",
+    "Software Engineering",
+    "Student Researcher",
+    "Building things that make a difference.",
+  ],
   openGraph: {
     title: "Gaurab Chhetri - Building things that make a difference.",
     description:
@@ -41,11 +49,16 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+          easterEggObj={{
+            secretWord: process.env.WORD_EASTER_EGG_TRIGGER!,
+            message: process.env.WORD_EASTER_EGG_MESSAGE!,
+            subMessage: process.env.WORD_EASTER_EGG_SUB_MESSAGE!,
+          }}
+        >
           <NavBar />
           {children}
           <Footer />
