@@ -134,7 +134,7 @@ export default function NavBar() {
               renderLinks.includes(link.label)
             ).map((link) => (
               <InView
-                key={link.label}
+                key={link.href}
                 variants={{
                   hidden: { opacity: 0, y: -20, filter: "blur(5px)" },
                   visible: { opacity: 1, y: 0, filter: "blur(0px)" },
@@ -142,9 +142,10 @@ export default function NavBar() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewOptions={{ margin: "0px 0px -200px 0px" }}
               >
-                <li className="-mx-1 sm:-mx-2">
+                <li className="-mx-1 sm:-mx-2" key={link.href}>
                   <Link
                     href={link.href}
+                    key={link.href}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "sm" })
                     )}
@@ -276,6 +277,7 @@ export default function NavBar() {
                   renderLinks.includes(link.label)
                 ).map((link) => (
                   <Link
+                    key={link.href}
                     href={link.href}
                     onClick={closeDrawer}
                     target="_blank"
