@@ -133,7 +133,7 @@ export default async function Page() {
   );
 }
 
-export function LinksCardList({ links }: { links: LinkCard[] }) {
+function LinksCardList({ links }: { links: LinkCard[] }) {
   return (
     <AnimatedBackground
       className="rounded-lg bg-card !w-full"
@@ -190,7 +190,7 @@ export function LinksCardList({ links }: { links: LinkCard[] }) {
   );
 }
 
-export function LinksList({ links }: { links: LinkItem[] }) {
+function LinksList({ links }: { links: LinkItem[] }) {
   return (
     <ul className="list-disc pl-8">
       {links.map((link, idx) => (
