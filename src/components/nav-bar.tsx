@@ -65,6 +65,18 @@ export default function NavBar() {
               viewOptions={{ margin: "0px 0px -200px 0px" }}
             >
               <li className="hidden sm:block">
+                <CommandBox />
+              </li>
+            </InView>
+            <InView
+              variants={{
+                hidden: { opacity: 0, y: -20, filter: "blur(5px)" },
+                visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+              }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewOptions={{ margin: "0px 0px -200px 0px" }}
+            >
+              <li className="hidden sm:block">
                 <Link
                   href="/projects"
                   className={cn(
@@ -154,18 +166,6 @@ export default function NavBar() {
             >
               <li className="-mx-1 sm:-mx-2">
                 <ModeToggle />
-              </li>
-            </InView>
-            <InView
-              variants={{
-                hidden: { opacity: 0, y: -20, filter: "blur(5px)" },
-                visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-              }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewOptions={{ margin: "0px 0px -200px 0px" }}
-            >
-              <li className="hidden sm:block">
-                <CommandBox />
               </li>
             </InView>
             {/* Mobile Menu Button */}
