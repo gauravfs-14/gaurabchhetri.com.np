@@ -180,8 +180,14 @@ export const ComputeNepalLinks: LinkCard[] = [
 export const HelpfulToolsLinks: LinkItem[] = [
   {
     label: "CSV to LaTeX",
-    href: "https://gaurabchhetri.com.np/minitools/csv-to-latex",
+    href: "/minitools/csv-to-latex",
     description: "Convert CSV tables to LaTeX tabular",
+    type: "internal",
+  },
+  {
+    label: "Word Counter",
+    href: "/minitools/word-counter",
+    description: "Count the number of words in a text",
     type: "internal",
   },
   {
