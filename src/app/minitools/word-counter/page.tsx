@@ -238,7 +238,7 @@ export default function WordCounterPage() {
                       {top10Words.map((word) => (
                         <li
                           key={word.word}
-                          className="border-b pb-2 last:border-b-0 flex items-center justify-between"
+                          className="border-b py-2 last:border-b-0 flex items-center justify-between"
                         >
                           {word.word}
                           <Badge variant="secondary" className="ml-4">
@@ -258,7 +258,7 @@ export default function WordCounterPage() {
                       {bottom10Words.map((word) => (
                         <li
                           key={word.word}
-                          className="border-b pb-2 last:border-b-0 flex items-center justify-between"
+                          className="border-b py-2 last:border-b-0 flex items-center justify-between"
                         >
                           {word.word}
                           <Badge variant="secondary" className="ml-4">
