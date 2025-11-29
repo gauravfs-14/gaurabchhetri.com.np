@@ -18,6 +18,7 @@ import {
   ComputeNepalLinks,
   UsefulMCPServersLinks,
 } from "@/content/links";
+import { Kbd } from "@/components/ui/kbd";
 
 const pages = [
   {
@@ -68,14 +69,12 @@ export function CommandBox() {
 
   return (
     <>
-      {/* <p
+      <p
         className="text-muted-foreground text-sm hover:cursor-pointer group"
         onClick={() => setOpen(true)}
       >
-        <kbd className="bg-muted group-hover:bg-primary/10 text-muted-foreground pointer-events-none inline-flex h-5 items-center gap-1 rounded border px-1.5 font-mono text-[10px] font-medium opacity-100 select-none">
-          <span className="text-sm font-medium">⌘</span>K
-        </kbd>
-      </p> */}
+        <Kbd>⌘+K</Kbd>
+      </p>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
