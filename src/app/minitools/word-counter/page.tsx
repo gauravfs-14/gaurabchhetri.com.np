@@ -147,7 +147,7 @@ export default function WordCounterPage() {
               onChange={(e) => setText(e.target.value)}
             />
             {/* Actions */}
-            <div className="flex items-center justify-start gap-2 mt-4">
+            <div className="flex items-center justify-start gap-2 mt-4 flex-wrap">
               <Button
                 variant="default"
                 size="sm"
