@@ -7,7 +7,6 @@ import { InView } from "@/components/ui/in-view";
 import { cn } from "@/lib/utils";
 import { ArrowRight, ArrowUpRight, Calendar, Mail } from "lucide-react";
 import Link from "next/link";
-
 interface ResearchPublication {
   title: string;
   date: string;
@@ -41,25 +40,17 @@ const EDUCATION = [
 
 const EXPERIENCE = [
   {
-    title: "Undergraduate Research Assistant",
-    institution: "AIT Lab - TXST",
+    title: "Undergraduate Researcher",
+    institution: "AIT Lab - Texas State University",
     institutionLink: "https://ait-lab.vercel.app/",
     location: "San Marcos, TX",
     date: "October 2024 - Present",
-    description:
-      "Created 25+ analytical/visualization tools (internal and open-source), processed 150k+ mobility/crash records, and accelerated AI-in-transportation workflows with reproducible pipelines, faculty dashboards, and standardized outputs. Authored or co-authored 5+ manuscripts published or online, with additional submissions (10+) in the pipeline; contributed methods, analysis, modeling, quality control, and documentation across Python, R, and JavaScript. Designed, implemented, and maintain the AIT Lab website in Next.js/Tailwind; 90+ Lighthouse SEO and performance scores; deployed on Vercel with publications, projects, team, and resources sections.",
-    skills: [
-      "TypeScript",
-      "JavaScript",
-      "React.js",
-      "Next.js",
-      "Tailwind CSS",
-      "Git",
-      "Python",
-      "R",
-      "Data Analysis",
-      "LaTex",
+    description: [
+      "Engineered and deployed 25+ data-driven web tools for AI and transportation research, processing 150k+ mobility and crash records with reproducible pipelines in Python and JavaScript/ TypeScript.",
+      "Implemented ML workflows for crash analytics and safety prediction, contributing to 5+ published papers.",
+      "Developed and optimized the AIT Lab website (Next.js + Tailwind), achieving 90+ Lighthouse performance and SEO scores.",
     ],
+    skills: ["Applied AI/ML", "Web Development", "Data Engineering"],
   },
 ];
 
@@ -167,6 +158,7 @@ export default function Home() {
         <ProfileCard />
       </InView>
       <div className="mt-14" />
+      {/* About Me Section */}
       <div>
         <InView
           variants={{
@@ -176,21 +168,11 @@ export default function Home() {
           viewOptions={{ margin: "0px 0px -100px 0px" }}
           transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
         >
-          {/* <p className="text-muted-foreground">
-            Hello World <span className="text-xl">👋</span>, I specialize in
-            building things that matters. Currently, I am an Undergraduate
-            Research Assistant at the Texas State University, where I combine my
-            skills in full-stack development with academic research to build
-            innovative tools and applications. I believe in the{" "}
-            <strong>mantra</strong>: <em>"Do what you want, not what you can!"</em> If you want someone who can do things, not just talk about it, let&apos;s talk.
-          </p> */}
           <p className="text-muted-foreground">
-            Hello World 👋! I&apos;m a software engineer and student researcher
-            at Texas State University. Since starting my journey in 2020,
-            I&apos;ve built impactful projects across web development, AI,
-            machine learning, and data science. Skilled in TypeScript,
-            JavaScript, Python, React, Next.js, and more, I focus on shipping
-            products that matter. I believe in the mantra:{" "}
+            Undergraduate Researcher in Computer Science. I work on AI, data
+            mining, and full-stack web development, and I like building
+            end-to-end systems that mix machine learning with solid engineering.
+            I believe in the mantra:{" "}
             <em>“Do what you want, not what you can!”</em>
           </p>
           <div className="flex gap-4 mt-4">
@@ -211,7 +193,8 @@ export default function Home() {
           </div>
         </InView>
       </div>
-      <div className="mt-14" />
+      {/* <div className="mt-14" /> */}
+      {/* Skills Section */}
       {/* <div>
         <InView
           variants={{
@@ -226,45 +209,6 @@ export default function Home() {
         <SkillsGrid />
       </div> */}
       <div className="mt-14" />
-      <section id="projects" className="scroll-mt-50">
-        <InView
-          variants={{
-            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
-            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-          }}
-          viewOptions={{ margin: "0px 0px -100px 0px" }}
-          transition={{ duration: 0.3, ease: "easeInOut", delay: 0 }}
-        >
-          <Badge variant={"secondary"} className="mb-4">
-            featuredProjects
-          </Badge>
-        </InView>
-        <ProjectsGrid displayFeaturesOnly={true} />
-      </section>
-      <div className="mt-4" />
-      <InView
-        variants={{
-          hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
-          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
-        }}
-        viewOptions={{ margin: "0px 0px -100px 0px" }}
-        transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
-      >
-        <div className="w-full flex justify-end">
-          <Link
-            href="/projects"
-            className={cn(
-              buttonVariants({ variant: "default", size: "sm" }),
-              "mt-4"
-            )}
-          >
-            viewAllProjects <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </InView>
-      <div className="mt-14" />
-      {/* <div className="mt-20" /> */}
-      {/* Experience Section */}
       <div>
         <InView
           variants={{
@@ -311,9 +255,16 @@ export default function Home() {
                   </Link>
                   , {exp.location}
                 </p>
-                <p className="text-sm text-muted-foreground">
-                  {exp.description}
-                </p>
+                <ul className="list-disc pl-6">
+                  {exp.description.map((desc, descIndex) => (
+                    <li
+                      key={descIndex}
+                      className="text-sm text-muted-foreground mb-1"
+                    >
+                      {desc}
+                    </li>
+                  ))}
+                </ul>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {exp.skills.map((skill, skillIndex) => (
                     <Badge key={skillIndex} variant="outline">
@@ -326,6 +277,46 @@ export default function Home() {
           ))}
         </div>
       </div>
+      <div className="mt-8" />
+      {/* Projects Section */}
+      <section id="projects" className="scroll-mt-50">
+        <InView
+          variants={{
+            hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+            visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+          }}
+          viewOptions={{ margin: "0px 0px -100px 0px" }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0 }}
+        >
+          <Badge variant={"secondary"} className="mb-4">
+            featuredProjects
+          </Badge>
+        </InView>
+        <ProjectsGrid displayFeaturesOnly={true} />
+      </section>
+      <div className="mt-4" />
+      {/* View All Projects Section */}
+      <InView
+        variants={{
+          hidden: { opacity: 0, y: 20, filter: "blur(5px)" },
+          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+        }}
+        viewOptions={{ margin: "0px 0px -100px 0px" }}
+        transition={{ duration: 0.3, ease: "easeInOut", delay: 0.05 }}
+      >
+        <div className="w-full flex justify-end">
+          <Link
+            href="/projects"
+            className={cn(
+              buttonVariants({ variant: "default", size: "sm" }),
+              "mt-4"
+            )}
+          >
+            viewAllProjects <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </InView>
+
       <div className="mt-8" />
       {/* Education Section */}
       <div>
@@ -379,6 +370,7 @@ export default function Home() {
       </div>
       <div className="mt-8" />
 
+      {/* Recent Dev Logs Section */}
       <section id="devLogs" className="scroll-mt-50">
         <InView
           variants={{
