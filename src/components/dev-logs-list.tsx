@@ -1,7 +1,7 @@
 import { AnimatedBackground } from "@/components/ui/animated-background";
 import { InView } from "@/components/ui/in-view";
 import Link from "next/link";
-import { getPosts } from "@/app/devLogs/utils";
+import { getPosts, formatDate } from "@/app/devLogs/utils";
 import { Calendar } from "lucide-react";
 
 export default async function DevLogsList({
@@ -61,11 +61,7 @@ export default async function DevLogsList({
                   <div className="w-full">
                     <p className="text-sm text-muted-foreground font-medium mb-2 flex items-center gap-1">
                       <Calendar className="inline mr-1 w-4 h-4" />
-                      {new Date(post.meta.date).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
+                      {formatDate(post.meta.date)}
                     </p>
                     <h2 className="text-xl font-semibold">
                       <span className="group relative inline-block font-semibold text-lg line-clamp-1 hover:underline">
