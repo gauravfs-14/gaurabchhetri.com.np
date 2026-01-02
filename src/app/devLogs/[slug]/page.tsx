@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getPosts, Post } from "../utils";
+import { getPosts, Post, formatDate } from "../utils";
 import Image from "next/image";
 // import ShareButtons from "../share-buttons";
 
@@ -71,12 +71,7 @@ export default async function Page({
         <p className="text-sm text-gray-500 mb-4">
           By{" "}
           <span className="font-medium">{meta.author ?? "Gaurab Chhetri"}</span>{" "}
-          on{" "}
-          {new Date(meta.date).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}
+          on {formatDate(meta.date)}
         </p>
         <h1>{meta.title}</h1>
         {meta.image && (

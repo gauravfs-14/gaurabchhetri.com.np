@@ -1,0 +1,47 @@
+---
+title: "The One Weird Thing I Noticed About How AI Writes Code"
+description: "Insights from using AI to generate code: why it sometimes produces messy outputs, unpredictable behavior, and tips for getting better results when building projects with AI."
+date: 2026-01-01
+tags:
+  - "AI coding"
+  - "code generation"
+  - "cli tool"
+  - "developer tips"
+  - "javascript"
+image: "how-ai-writes-code.png"
+---
+
+It’s no surprise that, like many developers these days, I use AI to the **fullest**. After spending a fair amount of time working with it, I’ve noticed some interesting quirks about _how it writes code_.
+
+## The Bad Example
+
+If you’ve worked with AI-generated code, you probably know the basics: AI models are trained on massive amounts of publicly available code from platforms like GitHub, GitLab, and Kaggle. They learn the patterns and styles present in this corpus and then try to reproduce them for us.
+
+The problem? The web is full of all kinds of examples: good, bad, and downright terrible. Even with the safety checks and fine-tuning applied by AI developers, models can still output messy, inefficient, or redundant code. Garbage In, Garbage Out (GIGO)[^1] is alive and well. If the AI “eats” a lot of messy code, it will inevitably spit out some slop.
+
+## Quirky Behavior
+
+One-shotting a project/ feature with AI can be unpredictable. Sometimes it generates hundreds of unnecessary files. Other times, it dumps an entire project into a single file. Neither is ideal for maintainable code. You might get a full framework scaffolded in minutes, but cleaning it up is a project in itself.
+
+Let me show you a basic workflow with AI for a fairly simple website with a few pages: Prompt ($1 - 2$mins) $\rightarrow$ AI Code Generation ($10 - 15$mins) $\rightarrow$ Cleanup ($10 - 15$mins if it worked, else 1 hr? 3 hrs? 1 day? 2 days? new prompt?).
+
+If it works, fine. If it doesn't, frustruation.
+
+## Solution (Try it but I can't guarantee anything)
+
+Here are some strategies I keep in mind when asking AI to generate code:
+
+1. Be crystal clear about what you need. If you say AI to _build X_, it will build some random whatever. If you tell it to _build X using Y with the help of Z, and make sure to tackle A, B, C_, you have some chance.
+2. Write an `AGENTS.md` file. Why, you may ask. Nowadays, almost all AI code editors recognize `AGENTS.md file`. You can define the specs of your project there, and the model will reference that file if something is unclear. If still unclear after that, it will generate a slop.
+3. Go slow. Try to resist the urge to ask the AI to do everything at once. AI still can't think like a human, and work like a human. You have to be specific and ask it to do specific task at a time.
+4. Try different models. Not every model is good at everything, sometimes if you are stuck at a place, changing to a different model can also work.
+5. If the AI is unable to fix a certain bug after 3-4 back to back prompting, tell it to search the web. Still not fixed? Try going back in time, and search in Google, you will find some stackoverflow page, GitHub discussion, raised issues, etc. Sometimes, asking the AI to fix a bug can be slower than just copying one line of code from stackoverflow[^2].
+6. Utilize the Plan Mode. Chain of Thought (CoT) significantly improves the output quality of the models[^3]. If you let it plan first, most likely it will generate better output.
+
+I am writing these, but I myself am not following these everytime and for every project. Nowadays the models are being very smart, and moving very fast. They can sometimes unexpectedly generate some good code, but the tips above can help you get out of mess.
+
+## References
+
+[^1]: https://en.wikipedia.org/wiki/Garbage_in,_garbage_out
+[^2]: https://stackoverflow.com/questions
+[^3]: https://openreview.net/pdf?id=_VjQlMeSB_J
