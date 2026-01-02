@@ -1,54 +1,40 @@
 # Gaurab Chhetri — Portfolio & Dev Logs
 
-> Engineer and builder focused on practical web, data, and ML projects. I like shipping useful tools, writing concise explainers, and keeping things simple. This file gives LLMs a high‑signal map of my site.
-
-I publish project write‑ups, lightweight dev logs, and small utilities. The site uses Next.js (App Router) with content in MDX. Links below point to the most relevant entry points and representative work.
+> Undergraduate Researcher in Computer Science at Texas State University (AIT Lab). I work on AI, data mining, and full-stack web development, building end-to-end systems that mix machine learning with solid engineering. Focus areas: applied AI/ML, transportation research, data engineering, and web development.
 
 ## About
 
-- What I do: design and ship end‑to‑end apps, from idea to deployment
-- Interests: developer tooling, data products, applied ML, clean UI/UX
-- Approach: iterate fast, document clearly, reduce complexity, measure impact
-- Contact: https://gaurabchhetri.com.np
+- **Current Role**: Undergraduate Researcher at AIT Lab, Texas State University (San Marcos, TX)
+- **Domains**: Applied AI/ML, Transportation Engineering, Data Science, Full-Stack Web Development
+- **Approach**: Build end-to-end systems, iterate fast, document clearly, reduce complexity
+- **Education**: B.S. Computer Science, Texas State University (Expected May 2028)
 
-## Highlights
+## Site Structure & Navigation
 
-- [ComputeNepal](https://gaurabchhetri.com.np/projects/computenepal): Community portal for resources and learning
-- [ScholarNest](https://gaurabchhetri.com.np/projects/scholarnest): Education platform and supporting tools
-- [VidXiv](https://gaurabchhetri.com.np/projects/vidxiv): Video‑centric exploration and write‑up
-- [CrashTransformer](https://gaurabchhetri.com.np/projects/crashtransformer): Research notes and engineering approach
+- **Home** (`/`): Start here for overview — experience, education, featured projects, recent dev logs, research publications
+- **Projects** (`/projects`): Detailed project write-ups with context, tech stack, and outcomes
+- **Dev Logs** (`/devLogs`): Short essays and notes on building, learnings, and development philosophy
+- **Tools** (`/minitools`): Interactive utilities (CSV → LaTeX converter, word counter)
 
-## Start here
+## Key Projects
 
-- [Home](https://gaurabchhetri.com.np/): Overview and navigation
-- [Projects](https://gaurabchhetri.com.np/projects): Selected work with context and outcomes
-- [Dev Logs](https://gaurabchhetri.com.np/devLogs): Short notes and essays
+- **ComputeNepal**: Community portal for computing resources and learning
+- **ScholarNest**: Education-focused platform and supporting tools
+- **CognitiveSky**: Scalable sentiment analysis framework for decentralized social media (Bluesky)
+- **VidXiv**: Video-centric exploration and analysis platform
 
-## Tools
+## Research & Publications
 
-- [CSV → LaTeX](https://gaurabchhetri.com.np/minitools/csv-to-latex): Convert CSV tables to LaTeX tabular
+8+ publications on AI/ML, transportation engineering, and computational methods. Topics include: sentiment analysis, crash analytics, state space models (Mamba), quantum computing, and tiny ML. See homepage for complete list with abstracts and links.
 
-## Projects (selected)
+## Where to Look Next
 
-- [ComputeNepal](https://gaurabchhetri.com.np/projects/computenepal): Community portal for computing resources and learning
-- [ScholarNest](https://gaurabchhetri.com.np/projects/scholarnest): Education‑focused platform and tooling
-- [CognitiveSky](https://gaurabchhetri.com.np/projects/cognitivesky): Project overview and outcomes
-- [VidXiv](https://gaurabchhetri.com.np/projects/vidxiv): Video‑focused exploration and details
-- [Bhanai](https://gaurabchhetri.com.np/projects/bhanai): NLP‑related project summary
-- [CrashTransformer](https://gaurabchhetri.com.np/projects/crashtransformer): Research/engineering notes
-- [Measles Dashboard](https://gaurabchhetri.com.np/projects/measles-dashboard): Data dashboard write‑up
-- [MedGuide](https://gaurabchhetri.com.np/projects/medguide): Medical guidance tooling
-- [ResQMe](https://gaurabchhetri.com.np/projects/resqme): Emergency and safety tool
+- **For project details**: Visit `/projects` or individual project pages
+- **For development insights**: Check `/devLogs` for essays on building and learnings
+- **For research work**: See publications section on homepage with full abstracts
+- **For tools**: Explore `/minitools` for interactive utilities
 
-## Dev Logs (blog)
+## Contact
 
-- [Learning from my first CLI](https://gaurabchhetri.com.np/devLogs/learning-from-first-cli): Notes and takeaways
-- [Learnings from hackathons](https://gaurabchhetri.com.np/devLogs/learnings-from-hackathons): Practical tips and reflections
-- [My mantra for building](https://gaurabchhetri.com.np/devLogs/my-mantra-for-building): Philosophy and process
-
-## Metadata
-
-- [Sitemap](https://gaurabchhetri.com.np/sitemap.xml): Machine‑readable list of important pages
-- [Robots.txt](https://gaurabchhetri.com.np/robots.txt): Crawler access rules
-- Spec reference: https://llmstxt.org/
-- Contact: https://gaurabchhetri.com.np
+- Website: https://gaurabchhetri.com.np
+- Resume: https://resume.gaurabchhetri.com.np
