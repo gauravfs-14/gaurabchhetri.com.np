@@ -1,37 +1,21 @@
 # Gaurab Chhetri - Portfolio Website
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Next.js-15.3.3-black?style=for-the-badge&logo=next.js" alt="Next.js" />
-  <img src="https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react" alt="React" />
-</div>
-
-<div align="center">
-  <h3>🚀 Building things that make a difference</h3>
-  <p>Personal portfolio showcasing my journey as a Software Engineer and Student Researcher</p>
-</div>
-
----
-
-## 🌟 About
-
 Welcome to my personal portfolio! I'm Gaurab Chhetri, a Software Engineer and Student Researcher at Texas State University. Since starting my journey in 2020, I've built impactful projects across web development, AI, machine learning, and data science.
 
 **My Mantra:** *"Do what you want, not what you can!"*
 
-## ✨ Features
+## Features
 
-- **🎨 Modern Design**: Clean, responsive design with smooth animations
-- **🌙 Dark/Light Mode**: Toggle between themes with system preference detection
-- **📱 Mobile Responsive**: Optimized for all device sizes with mobile drawer navigation
-- **⚡ Performance**: Built with Next.js 15 for optimal performance and SEO
-- **📝 MDX Blog**: Write blog posts using MDX with syntax highlighting
-- **🎯 Project Showcase**: Interactive project grid with detailed case studies
-- **🔍 SEO Optimized**: Open Graph images, meta tags, and structured data
-- **♿ Accessible**: WCAG compliant with proper ARIA labels and keyboard navigation
+- **Modern Design**: Clean, responsive design with smooth animations
+- **Dark/Light Mode**: Toggle between themes with system preference detection
+- **Mobile Responsive**: Optimized for all device sizes with mobile drawer navigation
+- **Performance**: Built with Next.js 15 for optimal performance and SEO
+- **MDX Blog**: Write blog posts using MDX with syntax highlighting
+- **Project Showcase**: Interactive project grid with detailed case studies
+- **SEO Optimized**: Open Graph images, meta tags, and structured data
+- **Accessible**: WCAG compliant with proper ARIA labels and keyboard navigation
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 
@@ -57,7 +41,7 @@ Welcome to my personal portfolio! I'm Gaurab Chhetri, a Software Engineer and St
 - **Analytics**: Built-in Next.js analytics
 - **Performance**: Core Web Vitals optimized
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Installation
 
@@ -90,7 +74,7 @@ yarn build
 yarn start
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```bash
 src/
@@ -113,7 +97,7 @@ src/
 └── hooks/               # Custom React hooks
 ```
 
-## 📝 Content Management
+## Content Management
 
 ### Adding Blog Posts
 
@@ -147,7 +131,7 @@ src/
    ---
    ```
 
-## 🔗 Links
+## Links
 
 - **Portfolio**: [gaurabchhetri.com.np](https://gaurabchhetri.com.np)
 - **Resume**: [resume.gaurabchhetri.com.np](https://resume.gaurabchhetri.com.np)
